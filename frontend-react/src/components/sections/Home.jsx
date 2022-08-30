@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import CoverVideo from "../CoverVideo";
 import TypeWriterText from "../TypeWriterText";
 import RoundTextBlack from "../../assets/Rounded-Text-Black.png";
@@ -29,6 +29,11 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const rotate = keyframes`
+100%{
+  transform: rotate(1turn) ;
+}
+`;
 
 const Round = styled.div`
   position: absolute;
@@ -40,6 +45,7 @@ const Round = styled.div`
   img {
     width: 100%;
     height: auto;
+    animation: ${rotate} 6s linear infinite reverse;
   }
 `;
 
