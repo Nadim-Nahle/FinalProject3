@@ -17,12 +17,32 @@ const NavBar = styled.nav`
   margin: 0 auto;
 `;
 
+const Menu = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+`;
+
+const MenuItem = styled.li`
+  margin: 0 1rem;
+  color: ${(props) => props.theme.text};
+  cursor: pointer;
+`;
+
 const Navigation = () => {
   return (
     <Section>
       <NavBar>
         <Logo />
-        <h2>Menu</h2>
+        <Menu>
+          <MenuItem>Home</MenuItem>
+          <MenuItem>About</MenuItem>
+          <MenuItem>Roadmap</MenuItem>
+          <MenuItem>Showcase</MenuItem>
+          <MenuItem>Team</MenuItem>
+          <MenuItem>Faq</MenuItem>
+        </Menu>
         <h2>Button</h2>
       </NavBar>
     </Section>
