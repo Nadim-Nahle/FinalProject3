@@ -1,10 +1,15 @@
+import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyle";
+import { light } from './styles/Themes'
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      New Project
+      <ThemeProvider theme={light}>
+        New Project
+      </ThemeProvider>
+
 
     </>
   );
