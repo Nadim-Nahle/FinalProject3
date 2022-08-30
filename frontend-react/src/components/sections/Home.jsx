@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CoverVideo from "../CoverVideo";
 import TypeWriterText from "../TypeWriterText";
 
 const Section = styled.section`
@@ -37,7 +38,7 @@ const Home = () => {
           <TypeWriterText />
         </Box>
         <Box>
-          <h1>video</h1>
+          <CoverVideo />
         </Box>
       </Container>
     </Section>
