@@ -8,7 +8,7 @@ const Section = styled.section`
   min-height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
   width: 100vw;
   position: relative;
-  background-color: ${(props) => props.theme.body});
+  background-color: ${(props) => props.theme.body};
 `;
 
 const Container = styled.div`
@@ -43,6 +43,24 @@ const Round = styled.div`
   }
 `;
 
+const Circle = styled.span`
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
+  font-size: ${(props) => props.theme.fontxl};
+`;
+
 const Home = () => {
   return (
     <Section>
@@ -54,6 +72,7 @@ const Home = () => {
           <CoverVideo />
         </Box>
         <Round>
+          <Circle>&#x2193;</Circle>
           <img src={RoundTextBlack} alt="NFT" />
         </Round>
       </Container>
