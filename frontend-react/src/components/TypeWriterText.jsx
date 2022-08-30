@@ -67,7 +67,7 @@ const TypeWriterText = () => {
         />
       </Title>
       <SubTitle>
-        Bored Of Apes? Celebrate the WC by Trying Something New.
+        Bored Of Apes? Celebrate the World cup by Trying Something New.
       </SubTitle>
       <ButtonContainer>
         <Button text="Explore" link="#about" />
