@@ -18,5 +18,6 @@ const CoverVideo = () => {
     </VideoContaier>
   );
 };
+1``;
 
 export default CoverVideo;
