@@ -19,12 +19,25 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Box = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Home = () => {
   return (
     <Section>
       <Container>
-        <h1>text</h1>
-        <h1>video</h1>
+        <Box>
+          <h1>text</h1>
+        </Box>
+        <Box>
+          <h1>video</h1>
+        </Box>
       </Container>
     </Section>
   );
