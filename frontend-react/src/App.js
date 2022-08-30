@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { Navigation } from "swiper";
 import GlobalStyles from "./styles/GlobalStyle";
 import { light } from './styles/Themes'
 
@@ -7,10 +8,8 @@ function App() {
     <>
       <GlobalStyles />
       <ThemeProvider theme={light}>
-        New Project
+        <Navigation />
       </ThemeProvider>
-
-
     </>
   );
 }
