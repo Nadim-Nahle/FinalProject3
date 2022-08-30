@@ -1,8 +1,11 @@
+import GlobalStyles from "./styles/GlobalStyle";
 
 function App() {
   return (
     <>
+      <GlobalStyles />
       New Project
+
     </>
   );
 }
