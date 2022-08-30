@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CoverVideo from "../CoverVideo";
 import TypeWriterText from "../TypeWriterText";
+import RoundTextBlack from "../../assets/Rounded-Text-Black.png";
 
 const Section = styled.section`
   min-height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
@@ -29,6 +30,19 @@ const Box = styled.div`
   align-items: center;
 `;
 
+const Round = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  right: 90%;
+  width: 6rem;
+  height: 6rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
 const Home = () => {
   return (
     <Section>
@@ -39,6 +53,9 @@ const Home = () => {
         <Box>
           <CoverVideo />
         </Box>
+        <Round>
+          <img src={RoundTextBlack} alt="NFT" />
+        </Round>
       </Container>
     </Section>
   );
