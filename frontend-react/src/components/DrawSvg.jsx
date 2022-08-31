@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useRef } from "react";
 import { useLayoutEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Vector from "../Icons/Vector";
 
 const VectorContainer = styled.div`
@@ -19,6 +19,15 @@ const VectorContainer = styled.div`
   }
 `;
 
+const Bounce = keyframes`
+  from {
+    transform: translateX(-50%) scale(0.5);
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+`;
+
 const Ball = styled.div`
   position: absolute;
   top: 0.5rem;
@@ -28,6 +37,7 @@ const Ball = styled.div`
   height: 1.5rem;
   border-radius: 50%;
   background-color: ${(props) => props.theme.text};
+  animation: ${Bounce} 0.5s linear infinite alternate;
 `;
 
 const DrawSvg = () => {
