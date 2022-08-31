@@ -78,6 +78,17 @@ const Details = styled.div`
   }
 `;
 
+const Price = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 1rem;
+    height: auto;
+  }
+`;
+
 const NftItem = ({ img, number = 0, price = 0 }) => {
   return (
     <ImgContainer>
