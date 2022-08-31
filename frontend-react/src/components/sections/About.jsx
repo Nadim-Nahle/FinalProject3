@@ -24,6 +24,15 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Box = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const About = () => {
   return <Section>About</Section>;
 };
