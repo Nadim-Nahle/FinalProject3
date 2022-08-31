@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 
 import img1 from '../assets/Nfts/1.svg'
 import img2 from '../assets/Nfts/2.svg'
@@ -30,16 +32,22 @@ height: 70vh;
 }
 
 .swiper-slide{
-    background-color: ${(props) => props.theme.carouselColor};;
+    background-color: ${(props) => props.theme.carouselColor};
+    border-radius: 20px;
+    align-items: center;
 }
 `
 
 const Carousel = () => {
     return (
         <Container><Swiper
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+            }}
             effect={"cards"}
             grabCursor={true}
-            modules={[EffectCards]}
+            modules={[EffectCards, Pagination, Navigation, Autoplay]}
             className="mySwiper"
         >
             <SwiperSlide><img src={img1} alt="Footballers" /></SwiperSlide>
