@@ -34,7 +34,14 @@ const Box = styled.div`
 `;
 
 const About = () => {
-  return <Section>About</Section>;
+  return (
+    <Section>
+      <Container>
+        <Box>Carousel</Box>
+        <Box>Text</Box>
+      </Container>
+    </Section>
+  );
 };
 
 export default About;
