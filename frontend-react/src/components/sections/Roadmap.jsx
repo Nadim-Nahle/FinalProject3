@@ -117,6 +117,7 @@ const Roadmap = () => {
           <DrawSvg />
         </SvgContainer>
         <Items>
+          <Item>&nbsp;</Item>
           <RoadMapItem title="title" subText="subtext" />
           <RoadMapItem title="title" subText="subtext" />
           <RoadMapItem title="title" subText="subtext" />
