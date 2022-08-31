@@ -13,7 +13,8 @@ import img9 from "../../assets/Nfts/9.svg";
 import img10 from "../../assets/Nfts/10.svg";
 import img11 from "../../assets/Nfts/11.svg";
 import img12 from "../../assets/Nfts/12.svg";
-import img13 from "../../assets/Nfts/13.svg";
+
+import ETH from "../../assets/icons8-ethereum-48.png";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -89,8 +90,10 @@ const NftItem = ({ img, number = 0, price = 0 }) => {
         </div>
         <div>
           <span>Price</span>
-          <br />
-          <h1>{Number(price).toFixed(1)}</h1>
+          <Price>
+            <img src={ETH} alt="ETH" />
+            <h1>{Number(price).toFixed(1)}</h1>
+          </Price>
         </div>
       </Details>
     </ImgContainer>
