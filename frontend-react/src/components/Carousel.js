@@ -28,6 +28,10 @@ height: 70vh;
     width:100%;
     height: 70vh;
 }
+
+.swiper-slide{
+    background-color: ${(props) => props.theme.carouselColor};;
+}
 `
 
 const Carousel = () => {
