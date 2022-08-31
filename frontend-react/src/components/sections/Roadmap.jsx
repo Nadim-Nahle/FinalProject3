@@ -47,7 +47,7 @@ const Items = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+
 
   & > *:nth-of-type(2n + 1) {
     justify-content: start;
