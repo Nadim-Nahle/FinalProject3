@@ -32,11 +32,19 @@ const Container = styled.div`
   position: relative
 `;
 
+const SvgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align- items: center;s
+`;
+
 const Roadmap = () => {
   return (
     <Section>
       <Title>
-        <Container></Container>
+        <Container>
+          <SvgContainer></SvgContainer>
+        </Container>
       </Title>
     </Section>
   );
