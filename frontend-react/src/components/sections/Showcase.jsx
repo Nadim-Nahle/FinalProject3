@@ -18,7 +18,7 @@ import ETH from "../../assets/icons8-ethereum-48.png";
 import { useRef } from "react";
 
 const Section = styled.section`
-  min-height: 110vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: ${(props) => props.theme.text};
   display: flex;
@@ -52,13 +52,13 @@ const ImgContainer = styled.div`
   width: 15rem;
   margin: 0 1rem;
   background-color: ${(props) => props.theme.body};
-  height: 50%;
+  height: 100%;
   border-radius: 20px;
   cursor: pointer;
 
   img {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
   }
 `;
 
