@@ -12,8 +12,33 @@ const Section = styled.section`
   position: relative;
 `;
 
+const Row = styled.div`
+  background-color: lightblue;
+  white-space: nowrap;
+  box-sizing: content-box;
+  margin: 2rem 0;
+  display: flex;
+
+  div {
+    width: 5rem;
+    height: 5rem;
+    background-color: yellow;
+  }
+`;
+
 const Showcase = () => {
-  return <Section>Showcase</Section>;
+  return (
+    <Section>
+      <Row>
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+        <div>item 4</div>
+        <div>item 5</div>
+        <div>item 6</div>
+      </Row>
+    </Section>
+  );
 };
 
 export default Showcase;
