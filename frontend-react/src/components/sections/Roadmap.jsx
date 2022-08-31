@@ -39,6 +39,17 @@ const SvgContainer = styled.div`
   align-items: center;
 `;
 
+const Items = styled.ul`
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+`;
+
 const Roadmap = () => {
   return (
     <Section>
@@ -47,6 +58,14 @@ const Roadmap = () => {
         <SvgContainer>
           <DrawSvg />
         </SvgContainer>
+        <Items>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+        </Items>
       </Container>
     </Section>
   );
