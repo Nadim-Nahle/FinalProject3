@@ -49,6 +49,11 @@ const Items = styled.ul`
   align-items: center;
   background-color: lightblue;
 `;
+const Item = styled.li`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
 
 const Roadmap = () => {
   return (
@@ -59,12 +64,12 @@ const Roadmap = () => {
           <DrawSvg />
         </SvgContainer>
         <Items>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          <Item>1</Item>
+          <Item>2</Item>
+          <Item>3</Item>
+          <Item>4</Item>
+          <Item>5</Item>
+          <Item>6</Item>
         </Items>
       </Container>
     </Section>
