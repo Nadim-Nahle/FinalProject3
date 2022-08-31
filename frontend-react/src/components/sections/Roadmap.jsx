@@ -16,11 +16,28 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   align- items: center;
+  margin: 1rem auto;
+  border-bottom: 2px solid  ${(props) => props.theme.text};
+  width: fit-content;
 `;
+
+const Container = styled.div`
+  width: 70%;
+  height: 200vh;
+  background-color: ${(props) => props.theme.body};
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align- items: center;
+  position: relative
+`;
+
 const Roadmap = () => {
   return (
     <Section>
-      <Title>Road</Title>
+      <Title>
+        <Container></Container>
+      </Title>
     </Section>
   );
 };
