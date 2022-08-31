@@ -60,6 +60,12 @@ const SubTextLight = styled.p`
   font-weight: 400;
 `;
 
+const ButtonContainer = styled.div`
+  width: 80%;
+  margin: 1rem auto;
+  align-self: flex-start;
+`;
+
 const About = () => {
   return (
     <Section>
@@ -80,9 +86,11 @@ const About = () => {
             Join an ambitious ever-growing community with multiple benefits and
             utilities.
           </SubTextLight>
-          <ThemeProvider theme={dark}>
-            <Button text="Join Our Discord" link="#" />
-          </ThemeProvider>
+          <ButtonContainer>
+            <ThemeProvider theme={dark}>
+              <Button text="Join Our Discord" link="#" />
+            </ThemeProvider>
+          </ButtonContainer>
         </Box>
       </Container>
     </Section>
