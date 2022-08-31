@@ -9,8 +9,20 @@ position: relative;
 
 `;
 
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  text-transform: capitalize;
+  color: ${(props) => props.theme.text};
+  display: flex;
+  justify-content: center;
+  align- items: center;
+`;
 const Roadmap = () => {
-  return <Section></Section>;
+  return (
+    <Section>
+      <Title>Road</Title>
+    </Section>
+  );
 };
 
 export default Roadmap;
