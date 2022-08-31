@@ -32,10 +32,24 @@ const Row = styled.div`
   }
 `;
 
-const NftItem = ({ img, number, price }) => {
+const ImgContainer = styled.div`
+  width: 15rem;
+  margin: 0 auto;
+  background-color: ${(props) => props.theme.body};
+
+  border-radius: 20px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+const NftItem = ({ img, number = 0, price = 0 }) => {
   return (
     <ImgContainer>
-      <img src="" alt="World Cup" />
+      <img src={img} alt="World Cup" />
     </ImgContainer>
   );
 };
