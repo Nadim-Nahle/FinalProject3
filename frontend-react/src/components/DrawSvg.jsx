@@ -1,4 +1,7 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useRef } from "react";
+import { useLayoutEffect } from "react";
 import styled from "styled-components";
 import Vector from "../Icons/Vector";
 
@@ -18,6 +21,35 @@ const VectorContainer = styled.div`
 
 const DrawSvg = () => {
   const ref = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useLayoutEffect(() => {
+    let element = ref.current;
+    let svg = document.getElementsByClassName("svg-path")[0];
+
+    const length = svg.getTotalLength();
+
+    svg.style.strokeDasharray = length;
+
+    svg.style.strokeDashoffset = length;
+
+    let t1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom bottom",
+        onUpdate: (self) => {
+          const draw = length * self.progress;
+
+          svg.style.strokeDashoffset = length - draw;
+        },
+      },
+    });
+
+    return () => {};
+  }, []);
+
   return (
     <VectorContainer>
       <Vector />
