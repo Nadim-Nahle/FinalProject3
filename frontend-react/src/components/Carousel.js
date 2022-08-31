@@ -48,6 +48,9 @@ const Carousel = () => {
             pagination={{
                 type: 'fraction',
             }}
+            scrollbar={{
+                draggable: true
+            }}
             navigation={true}
             effect={"cards"}
             grabCursor={true}
