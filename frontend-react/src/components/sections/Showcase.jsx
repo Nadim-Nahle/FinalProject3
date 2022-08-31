@@ -26,6 +26,13 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  & > *:first-child {
+    animation-duration: 20s;
+  }
+  & > *:last-child {
+    animation-duration: 20s;
+  }
 `;
 const move = keyframes`
   
@@ -38,7 +45,7 @@ const Row = styled.div`
   margin: 2rem 0;
   display: flex;
 
-  animation: ${move} 20s linear infinite ${(props) => props.direction};
+  animation: ${move} linear infinite ${(props) => props.direction};
 `;
 
 const ImgContainer = styled.div`
