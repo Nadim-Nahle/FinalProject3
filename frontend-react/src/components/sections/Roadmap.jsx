@@ -134,11 +134,26 @@ const Roadmap = () => {
         </SvgContainer>
         <Items>
           <Item>&nbsp;</Item>
-          <RoadMapItem title="title" subText="subtext" />
-          <RoadMapItem title="title" subText="subtext" />
-          <RoadMapItem title="title" subText="subtext" />
-          <RoadMapItem title="title" subText="subtext" />
-          <RoadMapItem title="title" subText="subtext" />
+          <RoadMapItem
+            title="Grand Opening"
+            subText="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+          />
+          <RoadMapItem
+            title="Great Benefits"
+            subText="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+          />
+          <RoadMapItem
+            title="Early Access"
+            subText="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+          />
+          <RoadMapItem
+            title="New Merch"
+            subText="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+          />
+          <RoadMapItem
+            title="Holders Ranking"
+            subText="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+          />
         </Items>
       </Container>
     </Section>
