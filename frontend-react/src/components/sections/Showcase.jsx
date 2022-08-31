@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -11,7 +11,11 @@ const Section = styled.section`
   align-items: center;
   position: relative;
 `;
-
+const move = keyframes`
+  
+  0%{ transform: translateX(100%)  };
+  100%{ transform: translateX(-100%)}
+`;
 const Row = styled.div`
   background-color: lightblue;
   white-space: nowrap;
