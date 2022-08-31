@@ -95,7 +95,7 @@ const NftItem = ({ img, number = 0, price = 0 }) => {
       <img src={img} alt="World Cup" />
       <Details>
         <div>
-          <span>Footballers</span>
+          <span>Footballer</span>
           <br />
           <h1>#{number}</h1>
         </div>
@@ -115,18 +115,18 @@ const Showcase = () => {
   return (
     <Section>
       <Row direction="none">
-        <NftItem img={img1} />
-        <NftItem img={img2} />
-        <NftItem img={img3} />
-        <NftItem img={img4} />
-        <NftItem img={img5} />
+        <NftItem img={img1} number={852} price={2.0} />
+        <NftItem img={img2} number={345} price={1.2} />
+        <NftItem img={img3} number={233} price={1.5} />
+        <NftItem img={img4} number={123} price={3.1} />
+        <NftItem img={img5} number={567} price={2.2} />
       </Row>
       <Row direction="reverse">
-        <NftItem img={img1} />
-        <NftItem img={img2} />
-        <NftItem img={img3} />
-        <NftItem img={img4} />
-        <NftItem img={img5} />
+        <NftItem img={img1} number={755} price={7.1} />
+        <NftItem img={img2} number={756} price={4.2} />
+        <NftItem img={img3} number={197} price={3.9} />
+        <NftItem img={img4} number={373} price={1.9} />
+        <NftItem img={img5} number={785} price={1.6} />
       </Row>
     </Section>
   );
