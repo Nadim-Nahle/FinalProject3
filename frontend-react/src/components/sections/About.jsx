@@ -42,6 +42,15 @@ const Title = styled.h2`
   width: 80%;
   margin 0 auto;
 `;
+const SubText = styled.p`
+  font-size: ${(props) => props.theme.fontlg};
+  color: ${(props) => props.theme.body};
+  align-self: flex-start;
+  width: 80%;
+  margin 1rem auto;
+  font-weight: 400;
+`;
+
 const About = () => {
   return (
     <Section>
