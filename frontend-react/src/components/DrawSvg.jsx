@@ -42,6 +42,7 @@ const Ball = styled.div`
 
 const DrawSvg = () => {
   const ref = useRef(null);
+  const ballRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -65,10 +66,19 @@ const DrawSvg = () => {
 
           svg.style.strokeDashoffset = length - draw;
         },
+        // onToggle: (self) => {
+        //   if (self.isActive) {
+        //     ballRef.current.style.display = "none ;";
+        //   } else {
+        //     ballRef.current.style.display = "inline-block;";
+        //   }
+        // },
       },
     });
 
-    return () => {};
+    return () => {
+      if (t1) t1.kill();
+    };
   }, []);
 
   return (
