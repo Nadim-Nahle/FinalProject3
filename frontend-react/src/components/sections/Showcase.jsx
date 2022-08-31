@@ -23,7 +23,7 @@ const Row = styled.div`
   margin: 2rem 0;
   display: flex;
 
-  animation: ${move} 20s linear infinite;
+  animation: ${move} 20s linear infinite ${(props) => props.direction};
   div {
     width: 5rem;
     height: 5rem;
@@ -32,10 +32,26 @@ const Row = styled.div`
   }
 `;
 
+const NftItem = ({ img, number, price }) => {
+  return (
+    <ImgContainer>
+      <img src="" alt="World Cup" />
+    </ImgContainer>
+  );
+};
+
 const Showcase = () => {
   return (
     <Section>
-      <Row>
+      <Row direction="none">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+        <div>item 4</div>
+        <div>item 5</div>
+        <div>item 6</div>
+      </Row>
+      <Row direction="reverse">
         <div>item 1</div>
         <div>item 2</div>
         <div>item 3</div>
