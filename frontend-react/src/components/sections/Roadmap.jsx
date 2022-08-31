@@ -51,9 +51,23 @@ const Items = styled.ul`
 
   & > *:nth-of-type(2n + 1) {
     justify-content: start;
+    div {
+      border-radius: 50px 0 50px 0;
+    }
+  }
+    p {
+      border-radius: 40px 0 40px 0;
+    }
   }
   & > *:nth-of-type(2n) {
     justify-content: end;
+    div {
+      border-radius: 0px 50px 0 50px;
+    }
+  }
+    p {
+      border-radius: 0 40px 0 40px;
+    }
   }
 `;
 const Item = styled.li`
