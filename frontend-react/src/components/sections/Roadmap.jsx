@@ -36,7 +36,7 @@ const Container = styled.div`
 const SvgContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;s
+  align-items: center;
 `;
 
 const Roadmap = () => {
