@@ -48,6 +48,7 @@ const Carousel = () => {
             pagination={{
                 type: 'fraction',
             }}
+            navigation={true}
             effect={"cards"}
             grabCursor={true}
             modules={[EffectCards, Pagination, Navigation, Autoplay]}
