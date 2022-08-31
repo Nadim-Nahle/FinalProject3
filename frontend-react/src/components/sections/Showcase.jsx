@@ -31,7 +31,7 @@ const Section = styled.section`
     animation-duration: 20s;
   }
   & > *:last-child {
-    animation-duration: 20s;
+    animation-duration: 13s;
   }
 `;
 const move = keyframes`
