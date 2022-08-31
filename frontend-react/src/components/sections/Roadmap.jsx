@@ -53,6 +53,7 @@ const Items = styled.ul`
     justify-content: start;
     div {
       border-radius: 50px 0 50px 0;
+      text-align: right;
     }
   }
     p {
@@ -63,6 +64,7 @@ const Items = styled.ul`
     justify-content: end;
     div {
       border-radius: 0px 50px 0 50px;
+      text-align: left;
     }
   }
     p {
