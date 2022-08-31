@@ -48,6 +48,13 @@ const Items = styled.ul`
   justify-content: center;
   align-items: center;
   background-color: lightblue;
+
+  & > *:nth-of-type(2n + 1) {
+    justify-content: start;
+  }
+  & > *:nth-of-type(2n) {
+    justify-content: end;
+  }
 `;
 const Item = styled.li`
   width: 100%;
@@ -65,10 +72,28 @@ const ItemContainer = styled.div`
 const Box = styled.p`
   height: fit-content;
   background-color: ${(props) => props.theme.carouselColor};
+  color: ${(props) => props.theme.text};
+  padding: 1rem;
+  position: relative;
+  border: 1px solid ${(props) => props.theme.text};
 `;
 
-const SubTitle = styled.span``;
-const Text = styled.span``;
+const SubTitle = styled.span`
+  display: Block;
+  font-size: ${(props) => props.theme.fontxl};
+  text-transform: capitalize;
+  color: ${(props) => props.theme.text};
+
+  font-weight: 400;
+  margin: 0.5rem 0;
+`;
+
+const Text = styled.span`
+  display: Block;
+  font-size: ${(props) => props.theme.fontsm};
+  text-transform: capitalize;
+  color: ${(props) => props.theme.text};
+`;
 
 const RoadMapItem = ({ title, subText }) => {
   return (
@@ -92,6 +117,10 @@ const Roadmap = () => {
           <DrawSvg />
         </SvgContainer>
         <Items>
+          <RoadMapItem title="title" subText="subtext" />
+          <RoadMapItem title="title" subText="subtext" />
+          <RoadMapItem title="title" subText="subtext" />
+          <RoadMapItem title="title" subText="subtext" />
           <RoadMapItem title="title" subText="subtext" />
         </Items>
       </Container>
