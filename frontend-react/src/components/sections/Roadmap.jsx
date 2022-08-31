@@ -55,6 +55,23 @@ const Item = styled.li`
   display: flex;
 `;
 
+const ItemContainer = styled.div`
+  width: 40%;
+  height: fit-content;
+  padding: 1rem;
+  border 3px solid ${props => props.theme.text}
+`
+
+const RoadMapItem = { title, subText } => {
+  return(
+    <Item>
+      <ItemContainer>
+
+      </ItemContainer>
+    </Item>
+  )
+}
+
 const Roadmap = () => {
   return (
     <Section>
