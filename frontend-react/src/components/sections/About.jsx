@@ -37,7 +37,7 @@ const Box = styled.div`
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
   align-self: flex-start;
   width: 80%;
   margin 0 auto;
@@ -45,6 +45,14 @@ const Title = styled.h2`
 const SubText = styled.p`
   font-size: ${(props) => props.theme.fontlg};
   color: ${(props) => props.theme.body};
+  align-self: flex-start;
+  width: 80%;
+  margin 1rem auto;
+  font-weight: 400;
+`;
+const SubTextLight = styled.p`
+  font-size: ${(props) => props.theme.fontlg};
+  color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
   align-self: flex-start;
   width: 80%;
   margin 1rem auto;
