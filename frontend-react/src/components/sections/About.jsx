@@ -15,6 +15,15 @@ const Section = styled.section`
   overflow: hidden;
 `;
 
+const Container = styled.div`
+  width: 75%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const About = () => {
   return <Section>About</Section>;
 };
