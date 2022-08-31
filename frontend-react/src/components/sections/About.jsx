@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../Button";
 import Carousel from "../Carousel";
 
 const Section = styled.section`
@@ -33,6 +34,14 @@ const Box = styled.div`
   align-items: center;
 `;
 
+const Title = styled.h2`
+  font-size: ${(props) => props.theme.fontxxl};
+  text-transform: capitalize;
+  color: ${(props) => props.theme.text};
+  align-self: flex-start;
+  width: 80%;
+  margin 0 auto;
+`;
 const About = () => {
   return (
     <Section>
@@ -40,7 +49,21 @@ const About = () => {
         <Box>
           <Carousel />
         </Box>
-        <Box>Text</Box>
+        <Box>
+          <Title>Welcome To The World Cup Club.</Title>
+          <SubText>
+            The World Cup CLUB is a private collection of NFTs—unique digital
+            collectibles. The Footballers are stored as ERC-721 tokens on the
+            Ethereum blockchain and hosted on IPFS.
+          </SubText>
+          <SubTextLight>
+            With more than 200+ hand drawn traits, each NFT is unique and comes
+            with a membership to an exclusive group of successful investors.
+            Join an ambitious ever-growing community with multiple benefits and
+            utilities.
+          </SubTextLight>
+          <Button text="Join Our Discord" link="#" />
+        </Box>
       </Container>
     </Section>
   );
