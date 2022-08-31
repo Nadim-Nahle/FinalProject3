@@ -67,6 +67,9 @@ const Box = styled.p`
   background-color: ${(props) => props.theme.carouselColor};
 `;
 
+const SubTitle = styled.span``;
+const Text = styled.span``;
+
 const RoadMapItem = ({ title, subText }) => {
   return (
     <Item>
@@ -89,12 +92,7 @@ const Roadmap = () => {
           <DrawSvg />
         </SvgContainer>
         <Items>
-          <Item>1</Item>
-          <Item>2</Item>
-          <Item>3</Item>
-          <Item>4</Item>
-          <Item>5</Item>
-          <Item>6</Item>
+          <RoadMapItem title="title" subText="subtext" />
         </Items>
       </Container>
     </Section>
