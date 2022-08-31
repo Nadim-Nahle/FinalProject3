@@ -20,6 +20,7 @@ import img10 from '../assets/Nfts/10.svg'
 import img11 from '../assets/Nfts/11.svg'
 import img12 from '../assets/Nfts/12.svg'
 import img13 from '../assets/Nfts/13.svg'
+import Arrow from '../assets/Arrow.svg'
 
 const Container = styled.div`
 width: 25vw;
@@ -36,6 +37,36 @@ height: 70vh;
     border-radius: 20px;
     align-items: center;
 }
+
+.swiper-button-next{
+    color: ${(props) => props.theme.text};
+    right: 0;
+    width: 4rem;
+    top: 60%;
+    background-image: url(${Arrow});
+    background-position: center;
+    background-size: cover;
+
+    &::after{
+        display: none;
+    }
+}
+.swiper-button-prev{
+    color: ${(props) => props.theme.text};
+    left: 0;
+    width: 4rem;
+    top: 60%;
+    transform: rotate(180deg);
+
+    background-image: url(${Arrow});
+    background-position: center;
+    background-size: cover;
+
+    &::after{
+        display: none;
+    }
+}
+
 `
 
 const Carousel = () => {
