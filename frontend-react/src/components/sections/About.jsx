@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { dark } from "../../styles/Themes";
 import Button from "../Button";
 import Carousel from "../Carousel";
 
@@ -51,7 +52,7 @@ const SubText = styled.p`
   font-weight: 400;
 `;
 const SubTextLight = styled.p`
-  font-size: ${(props) => props.theme.fontlg};
+  font-size: ${(props) => props.theme.fontmd};
   color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
   align-self: flex-start;
   width: 80%;
@@ -79,7 +80,9 @@ const About = () => {
             Join an ambitious ever-growing community with multiple benefits and
             utilities.
           </SubTextLight>
-          <Button text="Join Our Discord" link="#" />
+          <ThemeProvider theme={dark}>
+            <Button text="Join Our Discord" link="#" />
+          </ThemeProvider>
         </Box>
       </Container>
     </Section>
