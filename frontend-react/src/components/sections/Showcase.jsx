@@ -23,10 +23,12 @@ const Row = styled.div`
   margin: 2rem 0;
   display: flex;
 
+  animation: ${move} 20s linear infinite;
   div {
     width: 5rem;
     height: 5rem;
-    background-color: yellow;
+    margin: 2rem;
+    background-color: red;
   }
 `;
 
