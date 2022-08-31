@@ -38,15 +38,19 @@ const Carousel = () => {
             modules={[EffectCards]}
             className="mySwiper"
         >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide><img src={img1} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img2} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img3} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img4} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img5} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img6} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img7} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img8} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img9} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img10} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img11} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img12} alt="Footballers" /></SwiperSlide>
+            <SwiperSlide><img src={img13} alt="Footballers" /></SwiperSlide>
         </Swiper></Container>
     )
 }
