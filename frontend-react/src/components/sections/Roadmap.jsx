@@ -59,18 +59,26 @@ const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
   padding: 1rem;
-  border 3px solid ${props => props.theme.text}
-`
+  border 3px solid ${(props) => props.theme.text}
+`;
 
-const RoadMapItem = { title, subText } => {
-  return(
+const Box = styled.p`
+  height: fit-content;
+  background-color: ${(props) => props.theme.carouselColor};
+`;
+
+const RoadMapItem = ({ title, subText }) => {
+  return (
     <Item>
       <ItemContainer>
-
+        <Box>
+          <SubTitle>{title}</SubTitle>
+          <Text>{subText}</Text>
+        </Box>
       </ItemContainer>
     </Item>
-  )
-}
+  );
+};
 
 const Roadmap = () => {
   return (
