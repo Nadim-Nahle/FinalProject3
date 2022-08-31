@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DrawSvg from "../DrawSvg";
 
 const Section = styled.section`
 min-height: 100vh;
@@ -15,9 +16,9 @@ const Title = styled.h1`
   color: ${(props) => props.theme.text};
   display: flex;
   justify-content: center;
-  align- items: center;
+  align-items: center;
   margin: 1rem auto;
-  border-bottom: 2px solid  ${(props) => props.theme.text};
+  border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
 `;
 
@@ -28,24 +29,25 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align- items: center;
-  position: relative
+  align-items: center;
+  position: relative;
 `;
 
 const SvgContainer = styled.div`
   display: flex;
   justify-content: center;
-  align- items: center;s
+  align-items: center;s
 `;
 
 const Roadmap = () => {
   return (
     <Section>
-      <Title>
-        <Container>
-          <SvgContainer></SvgContainer>
-        </Container>
-      </Title>
+      <Title>Roadmap</Title>
+      <Container>
+        <SvgContainer>
+          <DrawSvg />
+        </SvgContainer>
+      </Container>
     </Section>
   );
 };
