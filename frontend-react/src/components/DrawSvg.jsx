@@ -19,6 +19,17 @@ const VectorContainer = styled.div`
   }
 `;
 
+const Ball = styled.div`
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.text};
+`;
+
 const DrawSvg = () => {
   const ref = useRef(null);
 
@@ -51,9 +62,12 @@ const DrawSvg = () => {
   }, []);
 
   return (
-    <VectorContainer>
-      <Vector />
-    </VectorContainer>
+    <>
+      <Ball />
+      <VectorContainer>
+        <Vector />
+      </VectorContainer>
+    </>
   );
 };
 
