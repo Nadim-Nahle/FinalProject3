@@ -40,6 +40,19 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
 `;
+const ImageContainer = styled.div`
+  width: 15rem;
+  margin: 0 1rem;
+  background-color: ${(props) => props.theme.body};
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 15rem;
+  }
+`;
 
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
