@@ -48,6 +48,9 @@ const Title = styled.h1`
   padding: 1rem 2rem;
   z-index: 10;
   width: 35%;
+  text-transform: capitalize;
+
+  text-shadow: 1px 1px 2px ${(props) => props.theme.text};
 `;
 
 const BtnContainer = styled.div`
