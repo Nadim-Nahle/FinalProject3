@@ -31,6 +31,11 @@ const Name = styled.div`
   display: flex;
   align-items: center;
 `;
+const Indicator = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Accordion = ({ title, children }) => {
   const [collapse, setCollapse] = useState(false);
