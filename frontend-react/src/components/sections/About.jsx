@@ -41,7 +41,7 @@ const Title = styled.h2`
   color: ${(props) => props.theme.body};
   align-self: flex-start;
   width: 80%;
-  margin 0 auto;
+  margin: 0 auto;
 `;
 const SubText = styled.p`
   font-size: ${(props) => props.theme.fontlg};
@@ -56,7 +56,7 @@ const SubTextLight = styled.p`
   color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
   align-self: flex-start;
   width: 80%;
-  margin 1rem auto;
+  margin: 1rem auto;
   font-weight: 400;
 `;
 

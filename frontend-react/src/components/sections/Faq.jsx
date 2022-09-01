@@ -56,7 +56,7 @@ const Faq = () => {
       scrub: true,
     });
     return () => {
-      ScrollTrigger.koll();
+      ScrollTrigger.kill();
     };
   }, []);
 
