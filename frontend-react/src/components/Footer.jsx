@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Banner from "./Banner";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -14,7 +15,11 @@ const Section = styled.section`
 `;
 
 const Footer = () => {
-  return <Section>Footer</Section>;
+  return (
+    <Section>
+      <Banner />
+    </Section>
+  );
 };
 
 export default Footer;
