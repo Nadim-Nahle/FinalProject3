@@ -27,6 +27,16 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
 `;
+
+const MemberComponent = ({ img, name = " ", position = " " }) => {
+  return (
+    <Item>
+      <ImageContainer>
+        <img src="" alt={name} />
+      </ImageContainer>
+    </Item>
+  );
+};
 const Team = () => {
   return (
     <Section>
