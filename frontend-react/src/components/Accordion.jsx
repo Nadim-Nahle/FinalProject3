@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   cursor: pointer;
@@ -8,6 +9,14 @@ const Container = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.carouselColor};
   margin: 3rem 0;
 `;
+
+const Title = styled.div`
+  font-size: ${(props) => props.theme.fontsm};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Accordion = ({ title, children }) => {
   return (
     <Container>
