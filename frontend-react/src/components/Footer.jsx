@@ -25,11 +25,22 @@ const Container = styled.div`
   border-bottom: 1 solid ${(props) => props.theme.text};
 `;
 
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Footer = () => {
   return (
     <Section>
       <Banner />
-      <Container></Container>
+      <Container>
+        <Left>
+          <Logo />
+        </Left>
+      </Container>
     </Section>
   );
 };
