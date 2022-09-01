@@ -37,15 +37,25 @@ const Left = styled.div`
 const IconList = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   & > * {
     padding-right: 0.5rem;
     transition: all 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
-  &:hover {
-    transform: scale(1.2);
-  }
+`;
+
+const MenuItems = styled.ul`
+  list-style: none;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
 `;
 
 const Footer = () => {
@@ -70,6 +80,14 @@ const Footer = () => {
             </a>
           </IconList>
         </Left>
+        <MenuItems>
+          <Item>Home</Item>
+          <Item>About</Item>
+          <Item>Roadmap</Item>
+          <Item>Showcase</Item>
+          <Item>Team</Item>
+          <Item>Faq</Item>
+        </MenuItems>
       </Container>
     </Section>
   );
