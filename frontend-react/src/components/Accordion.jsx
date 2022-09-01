@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -18,9 +19,10 @@ const Title = styled.div`
 `;
 
 const Accordion = ({ title, children }) => {
+  const [collapse, setCollapse] = useState(false);
   return (
     <Container>
-      <Title>{title}</Title>
+      <Title onClick={() => setCollapse(!collapse)}>{title}</Title>
       <Reveal>{children}</Reveal>
     </Container>
   );
