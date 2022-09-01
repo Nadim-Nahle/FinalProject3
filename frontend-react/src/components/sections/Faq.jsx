@@ -25,10 +25,20 @@ const Title = styled.h1`
   width: fit-content;
 `;
 
+const Container = styled.div`
+  width: 75%;
+  margin: 2rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Faq = () => {
   return (
     <Section>
       <Title>Faq</Title>
+      <Container></Container>
     </Section>
   );
 };
