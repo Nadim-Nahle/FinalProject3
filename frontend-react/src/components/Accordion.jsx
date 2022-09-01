@@ -32,6 +32,7 @@ const Name = styled.div`
   align-items: center;
 `;
 const Indicator = styled.span`
+  font-size: ${(props) => props.theme.fontxxl};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@ const Accordion = ({ title, children }) => {
         <Name>
           <span>{title}</span>
         </Name>
-        {collapse ? <Indicator>-</Indicator> : <indicator>+</indicator>}
+        {collapse ? <Indicator>-</Indicator> : <Indicator>+</Indicator>}
       </Title>
       <Reveal clicked={collapse}>{children}</Reveal>
     </Container>
