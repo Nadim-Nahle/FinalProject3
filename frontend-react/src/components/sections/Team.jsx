@@ -10,6 +10,7 @@ import img6 from "../../assets/Nfts/6.svg";
 import img7 from "../../assets/Nfts/7.svg";
 import img8 from "../../assets/Nfts/8.svg";
 import img9 from "../../assets/Nfts/9.svg";
+import MyConfetti from "../MyConfetti";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -103,6 +104,7 @@ const MemberComponent = ({ img, name = " ", position = " " }) => {
 const Team = () => {
   return (
     <Section>
+      <MyConfetti />
       <Title>Team</Title>
       <Container>
         <MemberComponent img={img1} name={"Jhon"} position="Founder" />
