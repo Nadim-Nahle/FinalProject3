@@ -75,6 +75,15 @@ const Item = styled.li`
     width: 100%;
   }
 `;
+
+const Bottom = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const Footer = () => {
   return (
     <Section>
@@ -106,6 +115,21 @@ const Footer = () => {
           <Item>Faq</Item>
         </MenuItems>
       </Container>
+      <Bottom>
+        <span>
+          &copy; {new Date().getFullYear()} WorldCup Club. All rights reserved.
+        </span>
+        <span>
+          Made with &#10084; by{" "}
+          <a
+            href="http://github.com/nadim-nahle"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nadim Nahle
+          </a>
+        </span>
+      </Bottom>
     </Section>
   );
 };
