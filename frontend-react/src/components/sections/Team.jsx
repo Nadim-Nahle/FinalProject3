@@ -59,9 +59,11 @@ const Item = styled.div`
   color: ${(props) => props.theme.body};
   margin: 2rem 1rem;
   position: relative;
+  z-index: 5;
 
   border: 2px solid ${(props) => props.theme.text};
   border-radius: 20px;
+  backdrop-filter: blue(4px);
 
   &:hover {
     img {
