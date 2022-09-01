@@ -49,14 +49,13 @@ const Items = styled.ul`
   justify-content: center;
   align-items: center;
 
-
   & > *:nth-of-type(2n + 1) {
     justify-content: start;
     div {
       border-radius: 50px 0 50px 0;
       text-align: right;
     }
-  }
+
     p {
       border-radius: 40px 0 40px 0;
     }
@@ -67,12 +66,13 @@ const Items = styled.ul`
       border-radius: 0px 50px 0 50px;
       text-align: left;
     }
-  }
+
     p {
       border-radius: 0 40px 0 40px;
     }
   }
 `;
+
 const Item = styled.li`
   width: 100%;
   height: 100%;
@@ -83,7 +83,7 @@ const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
   padding: 1rem;
-  border 3px solid ${(props) => props.theme.text}
+  border: 3px solid ${(props) => props.theme.text};
 `;
 
 const Box = styled.p`
