@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Banner from "./Banner";
+import Logo from "./Logo";
+import Facebook from "../Icons/Facebook";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -22,7 +24,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1 solid ${(props) => props.theme.text};
+  border-bottom: 1px solid ${(props) => props.theme.text};
 `;
 
 const Left = styled.div`
@@ -32,6 +34,20 @@ const Left = styled.div`
   align-items: center;
 `;
 
+const IconList = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  & > * {
+    padding-right: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
 const Footer = () => {
   return (
     <Section>
@@ -39,6 +55,20 @@ const Footer = () => {
       <Container>
         <Left>
           <Logo />
+          <IconList>
+            <a href="facebook.com" target={"_blank"} rel="noopener">
+              <Facebook />
+            </a>
+            <a href="facebook.com" target={"_blank"} rel="noopener">
+              <Facebook />
+            </a>
+            <a href="facebook.com" target={"_blank"} rel="noopener">
+              <Facebook />
+            </a>
+            <a href="facebook.com" target={"_blank"} rel="noopener">
+              <Facebook />
+            </a>
+          </IconList>
         </Left>
       </Container>
     </Section>
