@@ -62,12 +62,24 @@ const Item = styled.div`
   position: relative;
 `;
 
+const Name = styled.h2`
+  font-size: ${(props) => props.theme.fontlg};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.text};
+  margin: 1rem;
+`;
+
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
     <Item>
       <ImageContainer>
-        <img src="" alt={name} />
+        <img src={img} alt={name} />
       </ImageContainer>
+      <Name>{name}</Name>
+      <Position>{position}</Position>
     </Item>
   );
 };
@@ -76,15 +88,18 @@ const Team = () => {
     <Section>
       <Title>Team</Title>
       <Container>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
-        <div>member 1</div>
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"footballer"} position="founder" />
       </Container>
     </Section>
   );
