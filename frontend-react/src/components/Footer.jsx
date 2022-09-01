@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Banner from "./Banner";
 import Logo from "./Logo";
 import Facebook from "../Icons/Facebook";
+import Instagram from "../Icons/Instagram";
+import Twitter from "../Icons/Twitter";
+import LinkedIn from "../Icons/LinkedIn";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -82,6 +85,10 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    text-decoration: underline;
+  }
 `;
 
 const Footer = () => {
@@ -92,16 +99,33 @@ const Footer = () => {
         <Left>
           <Logo />
           <IconList>
-            <a href="facebook.com" target={"_blank"} rel="noopener">
-              <Facebook />
+            <a
+              href="http://linkedin.com/in/nadim-nahle"
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
+              <LinkedIn />
             </a>
-            <a href="facebook.com" target={"_blank"} rel="noopener">
-              <Facebook />
+
+            <a
+              href="http://instagram.com"
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
+              <Instagram />
             </a>
-            <a href="facebook.com" target={"_blank"} rel="noopener">
-              <Facebook />
+            <a
+              href="http://twitter.com"
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
+              <Twitter />
             </a>
-            <a href="facebook.com" target={"_blank"} rel="noopener">
+            <a
+              href="http://facebook.com"
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
               <Facebook />
             </a>
           </IconList>
