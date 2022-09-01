@@ -49,6 +49,13 @@ const Title = styled.h1`
   z-index: 10;
   width: 35%;
 `;
+
+const BtnContainer = styled.div`
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
 const Banner = () => {
   return (
     <Section>
@@ -63,7 +70,10 @@ const Banner = () => {
       <Title>
         Join The <br /> World Cup club
       </Title>
-      <Button text="join now" />
+
+      <BtnContainer>
+        <Button text="join now" />
+      </BtnContainer>
     </Section>
   );
 };
