@@ -55,7 +55,9 @@ const Faq = () => {
       pinSpacing: false,
       scrub: true,
     });
-    return () => {};
+    return () => {
+      ScrollTrigger.koll();
+    };
   }, []);
 
   return (
