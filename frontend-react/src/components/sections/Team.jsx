@@ -71,6 +71,15 @@ const Name = styled.h2`
   color: ${(props) => props.theme.text};
   margin: 1rem;
 `;
+const Position = styled.h2`
+  font-size: ${(props) => props.theme.fontmd};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
+  font-weight: 400;
+`;
 
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
