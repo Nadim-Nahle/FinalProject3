@@ -10,9 +10,6 @@ import img6 from "../../assets/Nfts/6.svg";
 import img7 from "../../assets/Nfts/7.svg";
 import img8 from "../../assets/Nfts/8.svg";
 import img9 from "../../assets/Nfts/9.svg";
-import img10 from "../../assets/Nfts/10.svg";
-import img11 from "../../assets/Nfts/11.svg";
-import img12 from "../../assets/Nfts/12.svg";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -43,8 +40,9 @@ const Container = styled.div`
 const ImageContainer = styled.div`
   width: 15rem;
   margin: 0 1rem;
-  background-color: ${(props) => props.theme.body};
-  height: 100%;
+  background-color: ${(props) => props.theme.carouselColor};
+
+  border: 1px solid ${(props) => props.theme.text};
   border-radius: 20px;
   cursor: pointer;
 
@@ -60,6 +58,16 @@ const Item = styled.div`
   color: ${(props) => props.theme.body};
   margin: 2rem 1rem;
   position: relative;
+
+  border: 2px solid ${(props) => props.theme.text};
+  border-radius: 20px;
+
+  &:hover {
+    img {
+      transform: translateY(-2rem) scale(1.2);
+      transition: all 0.3 ease;
+    }
+  }
 `;
 
 const Name = styled.h2`
@@ -98,17 +106,14 @@ const Team = () => {
       <Title>Team</Title>
       <Container>
         <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
+        <MemberComponent img={img2} name={"footballer"} position="founder" />
+        <MemberComponent img={img3} name={"footballer"} position="founder" />
+        <MemberComponent img={img4} name={"footballer"} position="founder" />
+        <MemberComponent img={img5} name={"footballer"} position="founder" />
+        <MemberComponent img={img6} name={"footballer"} position="founder" />
+        <MemberComponent img={img7} name={"footballer"} position="founder" />
+        <MemberComponent img={img8} name={"footballer"} position="founder" />
+        <MemberComponent img={img9} name={"footballer"} position="founder" />
       </Container>
     </Section>
   );
