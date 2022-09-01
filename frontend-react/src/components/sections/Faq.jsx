@@ -1,4 +1,8 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import React from "react";
+import { useLayoutEffect } from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 import Accordion from "../Accordion";
 
@@ -38,8 +42,24 @@ const Box = styled.div`
 `;
 
 const Faq = () => {
+  const ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  useLayoutEffect(() => {
+    let element = ref.current;
+
+    ScrollTrigger.create({
+      trigger: element,
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+    });
+    return () => {};
+  }, []);
+
   return (
-    <Section>
+    <Section ref={ref}>
       <Title>Faq</Title>
       <Container>
         <Box>
