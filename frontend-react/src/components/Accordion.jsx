@@ -14,7 +14,7 @@ const Container = styled.div`
 const Title = styled.div`
   font-size: ${(props) => props.theme.fontsm};
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -32,7 +32,7 @@ const Accordion = ({ title, children }) => {
   return (
     <Container>
       <Title onClick={() => setCollapse(!collapse)}>{title}</Title>
-      <Reveal>{children}</Reveal>
+      <Reveal clicked={collapse}>{children}</Reveal>
     </Container>
   );
 };

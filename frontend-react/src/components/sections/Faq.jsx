@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Accordion from "../Accordion";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -18,8 +19,6 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: ${(props) => props.theme.body};
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 1rem auto;
   border-bottom: 2px solid ${(props) => props.theme.carouselColor};
   width: fit-content;
@@ -30,7 +29,7 @@ const Container = styled.div`
   margin: 2rem auto;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -43,8 +42,34 @@ const Faq = () => {
     <Section>
       <Title>Faq</Title>
       <Container>
-        <Box>col 1</Box>
-        <Box>col 2</Box>
+        <Box>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+        </Box>
+        <Box>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+          <Accordion title="WHERE CAN I VIEW MY NFTS?">
+            Once minted or bought simply connect to your OpenSea account to view
+            your NFTs.
+          </Accordion>
+        </Box>
       </Container>
     </Section>
   );
