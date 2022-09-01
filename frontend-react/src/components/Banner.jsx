@@ -23,6 +23,24 @@ const Section = styled.section`
   overflow: hidden;
 `;
 
+const ImgConatiner = styled.div`
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
+`;
+
 const Banner = () => {
   return (
     <Section>
