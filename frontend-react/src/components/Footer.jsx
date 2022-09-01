@@ -9,15 +9,27 @@ const Section = styled.section`
   position: relative;
   color: ${(props) => props.theme.text};
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   flex-direction: column;
+`;
+
+const Container = styled.div`
+  width: 75%;
+  margin: 2rem auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1 solid ${(props) => props.theme.text};
 `;
 
 const Footer = () => {
   return (
     <Section>
       <Banner />
+      <Container></Container>
     </Section>
   );
 };
