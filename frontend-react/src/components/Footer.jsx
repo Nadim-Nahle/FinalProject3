@@ -6,6 +6,7 @@ import Facebook from "../Icons/Facebook";
 import Instagram from "../Icons/Instagram";
 import Twitter from "../Icons/Twitter";
 import LinkedIn from "../Icons/LinkedIn";
+import Scroll from "./Scroll";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -162,6 +163,7 @@ const Footer = () => {
           </a>
         </span>
       </Bottom>
+      <Scroll />
     </Section>
   );
 };
