@@ -6,7 +6,7 @@ const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.text};
   position: relative;
-
+  color: ${(props) => props.theme.body};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,11 +34,18 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Box = styled.div`
+  width: 45%;
+`;
+
 const Faq = () => {
   return (
     <Section>
       <Title>Faq</Title>
-      <Container></Container>
+      <Container>
+        <Box>col 1</Box>
+        <Box>col 2</Box>
+      </Container>
     </Section>
   );
 };
