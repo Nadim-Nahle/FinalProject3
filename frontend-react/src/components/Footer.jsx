@@ -58,6 +58,23 @@ const MenuItems = styled.ul`
   grid-gap: 1rem;
 `;
 
+const Item = styled.li`
+  width: fit-content;
+  cursor: pointer;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: ${(props) => props.theme.text};
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;
 const Footer = () => {
   return (
     <Section>
