@@ -6,6 +6,7 @@ import img3 from "../assets/Nfts/3.svg";
 import img4 from "../assets/Nfts/4.svg";
 import img5 from "../assets/Nfts/5.svg";
 import img6 from "../assets/Nfts/6.svg";
+import Button from "./Button";
 
 const Section = styled.section`
   height: 25rem;
@@ -41,6 +42,13 @@ const ImgConatiner = styled.div`
   }
 `;
 
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  color: ${(props) => props.theme.body};
+  padding: 1rem 2rem;
+  z-index: 10;
+  width: 35%;
+`;
 const Banner = () => {
   return (
     <Section>
@@ -52,6 +60,10 @@ const Banner = () => {
         <img src={img5} alt="The Footballers" />
         <img src={img6} alt="The Footballers" />
       </ImgConatiner>
+      <Title>
+        Join The <br /> World Cup club
+      </Title>
+      <Button text="join now" />
     </Section>
   );
 };
