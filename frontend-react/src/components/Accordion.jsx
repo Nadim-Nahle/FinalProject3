@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import { Minus } from "../Icons/Minus";
+import { Plus } from "../Icons/Plus";
 
 const Container = styled.div`
   cursor: pointer;
@@ -32,10 +34,15 @@ const Name = styled.div`
   align-items: center;
 `;
 const Indicator = styled.span`
-  font-size: ${(props) => props.theme.fontxxl};
+  font-size: ${(props) => props.theme.fontxl};
   display: flex;
   justify-content: center;
   align-items: center;
+  svg {
+    width: 0.9rem;
+    height: auto;
+    fill: ${(props) => props.theme.carouselColor};
+  }
 `;
 
 const Accordion = ({ title, children }) => {
@@ -46,7 +53,15 @@ const Accordion = ({ title, children }) => {
         <Name>
           <span>{title}</span>
         </Name>
-        {collapse ? <Indicator>-</Indicator> : <Indicator>+</Indicator>}
+        {collapse ? (
+          <Indicator>
+            <Minus />
+          </Indicator>
+        ) : (
+          <Indicator>
+            <Plus />
+          </Indicator>
+        )}
       </Title>
       <Reveal clicked={collapse}>{children}</Reveal>
     </Container>
