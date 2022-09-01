@@ -54,6 +54,14 @@ const ImageContainer = styled.div`
   }
 `;
 
+const Item = styled.div`
+  width: calc() (20rem- 4vw);
+  padding: 1rem 0;
+  color: ${(props) => props.theme.body};
+  margin: 2rem 1rem;
+  position: relative;
+`;
+
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
     <Item>
