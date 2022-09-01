@@ -27,11 +27,21 @@ const Reveal = styled.div`
   line-height: 1.1rem;
 `;
 
+const Name = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const Accordion = ({ title, children }) => {
   const [collapse, setCollapse] = useState(false);
   return (
     <Container>
-      <Title onClick={() => setCollapse(!collapse)}>{title}</Title>
+      <Title onClick={() => setCollapse(!collapse)}>
+        <Name>
+          <span>{title}</span>
+        </Name>
+        {collapse ? <Indicator>-</Indicator> : <indicator>+</indicator>}
+      </Title>
       <Reveal clicked={collapse}>{children}</Reveal>
     </Container>
   );
