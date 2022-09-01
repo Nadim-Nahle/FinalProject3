@@ -56,6 +56,43 @@ const BtnContainer = styled.div`
   justify-content: flex-end;
 `;
 
+const JoinNow = styled.button`
+  display: inline-block;
+  background-color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: ${(props) => props.theme.fontlg};
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 2px solid ${(props) => props.theme.body};
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    padding: 0.3rem;
+  }
+`;
+
 const Banner = () => {
   return (
     <Section>
@@ -68,11 +105,11 @@ const Banner = () => {
         <img src={img6} alt="The Footballers" />
       </ImgConatiner>
       <Title>
-        Join The <br /> World Cup club
+        Join The <br /> WorldCup club
       </Title>
 
       <BtnContainer>
-        <Button text="join now" />
+        <JoinNow>Join Now</JoinNow>
       </BtnContainer>
     </Section>
   );
