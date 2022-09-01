@@ -105,15 +105,19 @@ const Team = () => {
     <Section>
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img1} name={"footballer"} position="founder" />
-        <MemberComponent img={img2} name={"footballer"} position="founder" />
-        <MemberComponent img={img3} name={"footballer"} position="founder" />
-        <MemberComponent img={img4} name={"footballer"} position="founder" />
-        <MemberComponent img={img5} name={"footballer"} position="founder" />
-        <MemberComponent img={img6} name={"footballer"} position="founder" />
-        <MemberComponent img={img7} name={"footballer"} position="founder" />
-        <MemberComponent img={img8} name={"footballer"} position="founder" />
-        <MemberComponent img={img9} name={"footballer"} position="founder" />
+        <MemberComponent img={img1} name={"Jhon"} position="Founder" />
+        <MemberComponent img={img2} name={"Jane"} position="Co-founder" />
+        <MemberComponent img={img3} name={"Anonymous"} position="Director" />
+        <MemberComponent img={img4} name={"Anonymous"} position="Manager" />
+        <MemberComponent img={img5} name={"Anonymous"} position="Artist" />
+        <MemberComponent img={img6} name={"Anonymous"} position="Developer" />
+        <MemberComponent img={img7} name={"Anonymous"} position="Designer" />
+        <MemberComponent img={img8} name={"Anonymous"} position="Developer" />
+        <MemberComponent
+          img={img9}
+          name={"Anonymous"}
+          position="Blockchain expert"
+        />
       </Container>
     </Section>
   );
