@@ -16,6 +16,19 @@ const NavBar = styled.nav`
   width: 85%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 64em) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: inline-block;
+    }
+  }
 `;
 
 const Menu = styled.ul`
@@ -33,8 +46,14 @@ const Menu = styled.ul`
     height: ${(props) => `calc(100vh - ${props.theme.navHeight}))`};
     z-index: 50;
     backdrop-filter: blur(2px);
+
+    transform: ${(props) =>
+      props.click ? "translateY(0)" : "translateX(100%)"};
     background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.85)`};
+    transition: all 0.3s ease;
+
     flex-direction: column;
+
     justify-content: center;
   }
 `;
@@ -56,10 +75,18 @@ const MenuItem = styled.li`
   &:hover::after {
     width: 100%;
   }
+
+  @media (max-width: 64em) {
+    margin: 1rem 0;
+
+    &::after {
+      display: none;
+    }
+  }
 `;
 
 const HamburgerMenu = styled.span`
-  width: ${(props) => (props.clock ? "2rem" : "1.5rem")};
+  width: ${(props) => (props.click ? "2rem" : "1.5rem")};
   height: 2px;
   background: ${(props) => props.theme.text};
 
@@ -84,20 +111,20 @@ const HamburgerMenu = styled.span`
   &::after,
   &::before {
     content: " ";
-    width: ${(props) => (props.clock ? "1rem" : "1.5rem")};
+    width: ${(props) => (props.click ? "1rem" : "1.5rem")};
     height: 2px;
-    right: ${(props) => (props.clock ? "-2px" : "0")};
+    right: ${(props) => (props.click ? "-2px" : "0")};
     background: ${(props) => props.theme.text};
     position: absolute;
     transition: all 0.3s ease;
   }
 
   &::after {
-    top: ${(props) => (props.clock ? "0.3rem" : "0.5rem")};
+    top: ${(props) => (props.click ? "0.3rem" : "0.5rem")};
     transform: ${(props) => (props.click ? "rotate(-40deg)" : "rotate(0)")};
   }
   &::before {
-    bottom: ${(props) => (props.clock ? "0.3rem" : "0.5rem")};
+    bottom: ${(props) => (props.click ? "0.3rem" : "0.5rem")};
     transform: ${(props) => (props.click ? "rotate(40deg)" : "rotate(0)")};
   }
 `;
@@ -112,6 +139,7 @@ const Navigation = () => {
       block: "start",
       inline: "nearest",
     });
+    setClick(!click);
   };
   return (
     <Section>
@@ -127,8 +155,15 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+          <MenuItem>
+            <div className="mobile">
+              <Button text="Connect Wallet" link="/" />
+            </div>
+          </MenuItem>
         </Menu>
-        <Button text="Connect Wallet" link="/" />
+        <div className="desktop">
+          <Button text="Connect Wallet" link="/" />
+        </div>
       </NavBar>
     </Section>
   );
