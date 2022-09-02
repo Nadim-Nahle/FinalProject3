@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
@@ -23,6 +23,20 @@ const Menu = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  @media (max-width: 64em) {
+    position: fixed;
+    top: ${(props) => props.theme.navHeight};
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: ${(props) => `calc(100vh - ${props.theme.navHeight}))`};
+    z-index: 50;
+    backdrop-filter: blur(2px);
+    background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.85)`};
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -42,42 +56,55 @@ const MenuItem = styled.li`
   &:hover::after {
     width: 100%;
   }
-  display: none;
 `;
 
 const HamburgerMenu = styled.span`
-  width: 1.5rem;
+  width: ${(props) => (props.clock ? "2rem" : "1.5rem")};
   height: 2px;
   background: ${(props) => props.theme.text};
 
   position: absolute;
   top: 2rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: ${(props) =>
+    props.click
+      ? "translateX(-50%) rotate(90deg)"
+      : "translateX(-50%) rotate(0)"};
 
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+  @media (max-width: 64em) {
+    display: flex;
+  }
 
   &::after,
   &::before {
     content: " ";
-    width: 1.5rem;
+    width: ${(props) => (props.clock ? "1rem" : "1.5rem")};
     height: 2px;
+    right: ${(props) => (props.clock ? "-2px" : "0")};
     background: ${(props) => props.theme.text};
     position: absolute;
+    transition: all 0.3s ease;
   }
 
   &::after {
-    top: 0.5rem;
+    top: ${(props) => (props.clock ? "0.3rem" : "0.5rem")};
+    transform: ${(props) => (props.click ? "rotate(-40deg)" : "rotate(0)")};
   }
   &::before {
-    bottom: 0.5rem;
+    bottom: ${(props) => (props.clock ? "0.3rem" : "0.5rem")};
+    transform: ${(props) => (props.click ? "rotate(40deg)" : "rotate(0)")};
   }
 `;
 
 const Navigation = () => {
+  const [click, setClick] = useState(false);
+
   const scrollTo = (id) => {
     let element = document.getElementById(id);
     element.scrollIntoView({
@@ -90,8 +117,10 @@ const Navigation = () => {
     <Section>
       <NavBar>
         <Logo />
-        <HamburgerMenu>&nbsp;</HamburgerMenu>
-        <Menu>
+        <HamburgerMenu click={click} onClick={() => setClick(!click)}>
+          &nbsp;
+        </HamburgerMenu>
+        <Menu click={click}>
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
