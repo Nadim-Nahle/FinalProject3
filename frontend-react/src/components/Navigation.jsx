@@ -44,6 +44,17 @@ const MenuItem = styled.li`
   }
 `;
 
+const HamburgerMenu = styled.span`
+  width: 1.5rem;
+  height: 2px;
+  background: ${(props) => props.theme.text};
+
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 const Navigation = () => {
   const scrollTo = (id) => {
     let element = document.getElementById(id);
@@ -57,12 +68,13 @@ const Navigation = () => {
     <Section>
       <NavBar>
         <Logo />
+        <HamburgerMenu>&nbsp;</HamburgerMenu>
         <Menu>
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
-          <MenuItem onClick={() => scrollTo("home")}>Team</MenuItem>
+          <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
         </Menu>
         <Button text="Connect Wallet" link="/" />
