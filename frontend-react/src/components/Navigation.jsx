@@ -42,6 +42,7 @@ const MenuItem = styled.li`
   &:hover::after {
     width: 100%;
   }
+  display: none;
 `;
 
 const HamburgerMenu = styled.span`
@@ -53,6 +54,27 @@ const HamburgerMenu = styled.span`
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: " ";
+    width: 1.5rem;
+    height: 2px;
+    background: ${(props) => props.theme.text};
+    position: absolute;
+  }
+
+  &::after {
+    top: 0.5rem;
+  }
+  &::before {
+    bottom: 0.5rem;
+  }
 `;
 
 const Navigation = () => {
