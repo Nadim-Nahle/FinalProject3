@@ -1,4 +1,4 @@
-const { addUser } = require("../services/UserService");
+const { addUser, getByEmail, addGoogleUser } = require("../services/UserService");
 const User = require("../models/user")
 const { all } = require('../app/routes')
 require("dotenv").config();
@@ -35,7 +35,14 @@ async function register(req, res) {
   }
 }
 
+
+
+
+
+
+
 //EXPORTING MODULES
 module.exports = {
   register,
+  login,
 };
