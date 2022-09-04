@@ -32,6 +32,9 @@ const Container = styled.div`
 
   @media (max-width: 48em) {
     width: 90%;
+    h1 {
+      font-size: ${(props) => props.theme.fontxxxl};
+    }
   }
 `;
 
