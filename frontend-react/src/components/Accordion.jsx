@@ -11,6 +11,10 @@ const Container = styled.div`
   flex-direction: column;
   border-bottom: 1px solid ${(props) => props.theme.carouselColor};
   margin: 3rem 0;
+
+  @media (max-width: 48em) {
+    margin: 2rem 0;
+  }
 `;
 
 const Title = styled.div`
@@ -34,7 +38,7 @@ const Name = styled.div`
   align-items: center;
 `;
 const Indicator = styled.span`
-  font-size: ${(props) => props.theme.fontxl};
+  font-size: ${(props) => props.theme.fontxxl};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +46,9 @@ const Indicator = styled.span`
     width: 0.9rem;
     height: auto;
     fill: ${(props) => props.theme.carouselColor};
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
   }
 `;
 
