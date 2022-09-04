@@ -51,13 +51,17 @@ const Container = styled.div`
   }
 `;
 const ImageContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  width: 15rem;
+  margin: 0 1rem;
   background-color: ${(props) => props.theme.carouselColor};
 
   border: 1px solid ${(props) => props.theme.text};
   border-radius: 20px;
   cursor: pointer;
+  @media (max-width: 30em) {
+    margin: 0 auto;
+    width: 80%;
+  }
 
   img {
     width: 100%;
@@ -80,11 +84,10 @@ const Item = styled.div`
   &:hover {
     img {
       transform: translateY(-2rem) scale(1.2);
-      transition: all 0.3 ease;
     }
   }
 
-  @media (max-width: 64em) {
+  @media (max-width: 30em) {
     width: 70vw;
   }
 `;
