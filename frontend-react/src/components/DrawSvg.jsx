@@ -72,13 +72,13 @@ const DrawSvg = () => {
 
           svg.style.strokeDashoffset = length - draw;
         },
-        // onToggle: (self) => {
-        //   if (self.isActive) {
-        //     ballRef.current.style.display = "none";
-        //   } else {
-        //     ballRef.current.style.display = "inline-block";
-        //   }
-        // },
+        onToggle: (self) => {
+          if (self.isActive) {
+            ballRef.current.style.display = "none";
+          } else {
+            ballRef.current.style.display = "inline-block";
+          }
+        },
       },
     });
 
@@ -89,8 +89,8 @@ const DrawSvg = () => {
 
   return (
     <>
-      <Ball />
-      <VectorContainer>
+      <Ball ref={ballRef} />
+      <VectorContainer ref={ref}>
         <Vector />
       </VectorContainer>
     </>
