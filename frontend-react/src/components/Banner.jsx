@@ -6,7 +6,6 @@ import img3 from "../assets/Nfts/3.svg";
 import img4 from "../assets/Nfts/4.svg";
 import img5 from "../assets/Nfts/5.svg";
 import img6 from "../assets/Nfts/6.svg";
-import Button from "./Button";
 
 const Section = styled.section`
   height: 25rem;
@@ -22,6 +21,11 @@ const Section = styled.section`
   align-items: center;
 
   overflow: hidden;
+
+  @media (max-width: 48em) {
+    height: 15rem;
+    flex-direction: column;
+  }
 `;
 
 const ImgConatiner = styled.div`
@@ -40,6 +44,13 @@ const ImgConatiner = styled.div`
     width: 15rem;
     height: 15rem;
   }
+
+  @media (max-width: 48em) {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -51,12 +62,27 @@ const Title = styled.h1`
   text-transform: capitalize;
 
   text-shadow: 1px 1px 2px ${(props) => props.theme.text};
+
+  @media (max-width: 64em) {
+    width: 40%;
+    font-size: ${(props) => props.theme.fontxxl};
+    text-align: center;
+  }
+  @media (max-width: 48em) {
+    width: 100%;
+    font-size: ${(props) => props.theme.fontxl};
+    padding: 2rem 0;
+  }
 `;
 
 const BtnContainer = styled.div`
   width: 35%;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 48em) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const JoinNow = styled.button`
@@ -72,6 +98,14 @@ const JoinNow = styled.button`
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
+
+  @media (max-width: 48em) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 30em) {
+    padding: 0.5rem 2rem;
+    font-size: ${(props) => props.theme.fontsm};
+  }
 
   &:hover {
     transform: scale(0.9);
