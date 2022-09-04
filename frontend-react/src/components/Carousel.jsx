@@ -55,7 +55,10 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     img {
+      display: block;
       width: 50%;
+      height: auto;
+      object-fit: cover;
     }
   }
 

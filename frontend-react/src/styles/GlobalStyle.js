@@ -7,9 +7,7 @@ import "@fontsource/sora"
 
 const GlobalStyles = createGlobalStyle`
 
-*{
-    outline: 1px solid red;
-}
+
 
 *,*::before,*::after{
     margin: 0;
