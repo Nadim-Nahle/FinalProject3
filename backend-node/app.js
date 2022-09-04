@@ -28,4 +28,4 @@ app.use("/api/v1", userRouter);
 
 app.use(cors());
 app.use(express.json());
-app.listen(6000);
+app.listen(8000);
