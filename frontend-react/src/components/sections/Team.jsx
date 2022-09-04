@@ -51,8 +51,8 @@ const Container = styled.div`
   }
 `;
 const ImageContainer = styled.div`
-  width: 15rem;
-  margin: 0 1rem;
+  width: 80%;
+  margin: 0 auto;
   background-color: ${(props) => props.theme.carouselColor};
 
   border: 1px solid ${(props) => props.theme.text};
