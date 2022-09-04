@@ -25,5 +25,4 @@ async function getByEmail(email) {
 module.exports = {
   addUser,
   getByEmail,
-  addGoogleUser,
 };
