@@ -1,21 +1,21 @@
 const mongoose = require("mongoose");
 
 //MOVIE SCHEMA
-const homeSchema = new mongoose.Schema({
+const aboutSchema = new mongoose.Schema({
 
-  name: {
+  title: {
     type: String,
     min: 1,
     max: 255,
   },
 
-  logo: {
+  description: {
     type: String,
     min: 1,
     max: 255,
   },
 
-  catchphrase: {
+  details: {
     type: String,
     min: 6,
     max: 255,
@@ -30,4 +30,4 @@ const homeSchema = new mongoose.Schema({
 });
 
 //EXPORTING SCHEMA
-module.exports = mongoose.model("Home", homeSchema);
+module.exports = mongoose.model("About", aboutSchema);
