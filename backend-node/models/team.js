@@ -8,13 +8,13 @@ const teamSchema = new mongoose.Schema({
     default: "",
   },
 
-  price: {
+  name: {
     type: String,
     min: 1,
     max: 255,
   },
 
-  number: {
+  description: {
     type: String,
     min: 1,
     max: 255,
