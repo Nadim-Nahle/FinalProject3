@@ -9,12 +9,12 @@ const faqSchema = new mongoose.Schema({
     max: 255,
   },
 
-  answers: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Answers",
-    },
-  ],
+  answers:
+  {
+    type: String,
+    min: 1,
+    max: 255,
+  },
 
 
   owner: {
