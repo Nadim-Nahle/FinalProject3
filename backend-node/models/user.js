@@ -67,7 +67,12 @@ const userSchema = new mongoose.Schema(
       default: "",
     },
 
-
+    movies: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Home",
+      },
+    ],
   },
   { timestamps: true }
 );
