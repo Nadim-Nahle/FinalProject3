@@ -67,10 +67,34 @@ const userSchema = new mongoose.Schema(
       default: "",
     },
 
-    movies: [
+    home: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Home",
+      },
+    ],
+    about: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "About",
+      },
+    ],
+    rodmap: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Roadmap",
+      },
+    ],
+    team: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Team",
+      },
+    ],
+    faq: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Faq",
       },
     ],
   },
