@@ -97,6 +97,12 @@ const userSchema = new mongoose.Schema(
         ref: "Faq",
       },
     ],
+    nft: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Nft",
+      },
+    ],
   },
   { timestamps: true }
 );
