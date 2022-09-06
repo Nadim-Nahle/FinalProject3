@@ -12,6 +12,7 @@ const router = express.Router();
 router.post("/auth/register", registerErrors, register);
 router.post("/auth/login", login);
 
-
+//HOME ROutes
+router.post("/auth/addhome", auth, addHome);
 
 module.exports = router;

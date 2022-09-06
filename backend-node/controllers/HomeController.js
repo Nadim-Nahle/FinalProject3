@@ -70,8 +70,6 @@ async function updateHome(req, res) {
 }
 
 
-
-
 module.exports = {
   addHome,
   getHome,
