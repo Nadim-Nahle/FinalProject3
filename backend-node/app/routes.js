@@ -17,5 +17,6 @@ router.post("/auth/login", login);
 router.post("/auth/addhome", auth, addHome);
 router.get("/auth/home", auth, getHome);
 router.delete("/auth/delete/:id", auth, deleteHome);
+router.patch("/auth/movie/update/:id", auth, updateHome);
 
 module.exports = router;
