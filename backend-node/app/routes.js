@@ -1,4 +1,5 @@
 const express = require("express");
+const { deleteHome } = require("../controllers/HomeController");
 const {
   register,
   login,
@@ -15,5 +16,6 @@ router.post("/auth/login", login);
 //HOME ROutes
 router.post("/auth/addhome", auth, addHome);
 router.get("/auth/home", auth, getHome);
+router.delete("/auth/delete/:id", auth, deleteHome);
 
 module.exports = router;
