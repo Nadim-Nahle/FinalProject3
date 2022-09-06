@@ -14,5 +14,6 @@ router.post("/auth/login", login);
 
 //HOME ROutes
 router.post("/auth/addhome", auth, addHome);
+router.get("/auth/home", auth, getHome);
 
 module.exports = router;
