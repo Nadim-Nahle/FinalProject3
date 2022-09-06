@@ -26,3 +26,17 @@ async function getHome(req, res) {
   }
 }
 
+//DELETE HOME CONTROLLER
+async function deleteHome(req, res) {
+  try {
+    const home = await Home.findById(req.params.id);
+    if (!home) {
+      return res.status(404).send();
+    }
+    await home.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
