@@ -40,3 +40,43 @@ async function deleteHome(req, res) {
   }
 }
 
+//DELETE MOVIE CONTROLLER
+async function deleteHome(req, res) {
+  try {
+    const movie = await Home.findById(req.params.id);
+    if (!movie) {
+      return res.status(404).send();
+    }
+    await movie.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+//UPDATE HOME CONTROLLER
+async function updateHome(req, res) {
+  try {
+    const home = await Home.findById(req.params.id);
+    if (!home) {
+      return res.status(404).send();
+    }
+    Object.assign(home, req.body);
+    home.save();
+    res.send({ data: home });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+
+
+module.exports = {
+  addHome,
+  getHome,
+  deleteHome,
+  updateHome,
+};
+
+
