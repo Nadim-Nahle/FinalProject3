@@ -1,10 +1,17 @@
 const express = require("express");
-const { deleteHome } = require("../controllers/HomeController");
 const {
   register,
   login,
 } = require("../controllers/UserController");
 const { registerErrors } = require("../middlewares/ErrorsMiddleware");
+const {
+  addHome,
+  getHome,
+  deleteHome,
+  updateHome,
+} = require("../controllers/HomeController");
+const auth = require("../middlewares/AuthMiddleware");
+
 const router = express.Router();
 
 // ROUTES
