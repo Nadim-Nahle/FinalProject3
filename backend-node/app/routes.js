@@ -53,6 +53,7 @@ router.patch("/auth/roadmap/update/:id", auth, updateRoadmap);
 //ROADMAP ROUTES
 router.post("/auth/addteam", auth, addTeam);
 router.get("/auth/team", auth, getTeam);
+router.delete("/auth/team/delete/:id", auth, deleteTeam);
 
 
 module.exports = router;
