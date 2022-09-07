@@ -25,3 +25,22 @@ async function getRoadmap(req, res) {
     res.status(400).send(error.message);
   }
 }
+
+//DELETE ROADMAP CONTROLLER
+async function deleteRoadmap(req, res) {
+  try {
+    const roadmap = await Roadmap.findById(req.params.id);
+    if (!roadmap) {
+      return res.status(404).send();
+    }
+    await roadmap.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+
+
+
