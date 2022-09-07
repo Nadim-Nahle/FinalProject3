@@ -60,7 +60,7 @@ module.exports = {
   addNft,
   getNft,
   deleteNft,
-
+  updateNft,
 };
 
 
