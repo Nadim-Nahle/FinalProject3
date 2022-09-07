@@ -78,5 +78,6 @@ router.patch("/auth/faq/update/:id", auth, updateFaq);
 router.post("/auth/addnft", auth, addNft);
 router.get("/auth/nft", auth, getNft);
 router.delete("/auth/nft/delete/:id", auth, deleteNft);
+router.patch("/auth/nft/update/:id", auth, updateNft);
 
 module.exports = router;
