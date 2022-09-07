@@ -50,4 +50,8 @@ router.get("/auth/roadmap", auth, getRoadmap);
 router.delete("/auth/roadmap/delete/:id", auth, deleteRoadmap);
 router.patch("/auth/roadmap/update/:id", auth, updateRoadmap);
 
+//ROADMAP ROUTES
+router.post("/auth/addteam", auth, addTeam);
+
+
 module.exports = router;
