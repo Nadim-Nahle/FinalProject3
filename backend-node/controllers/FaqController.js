@@ -13,5 +13,20 @@ async function addFaq(req, res) {
   }
 }
 
+//GET FAQ CONTROLLER
+async function getFaq(req, res) {
+  try {
+    const faq = await Faq.find({ owner: req.user._id });
+    if (!faq) {
+      return res.status(404).send();
+    }
+    res.status(200).send(faq);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+};
 
 
