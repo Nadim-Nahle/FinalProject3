@@ -26,5 +26,17 @@ async function getTeam(req, res) {
   }
 }
 
-
+//DELETE TEAM CONTROLLER
+async function deleteTeam(req, res) {
+  try {
+    const team = await Team.findById(req.params.id);
+    if (!team) {
+      return res.status(404).send();
+    }
+    await team.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
 
