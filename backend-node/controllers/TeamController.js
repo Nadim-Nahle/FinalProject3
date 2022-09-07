@@ -40,3 +40,22 @@ async function deleteTeam(req, res) {
   }
 }
 
+
+//UPDATE TEAM CONTROLLER
+async function updateTeam(req, res) {
+  try {
+    const team = await Team.findById(req.params.id);
+    if (!team) {
+      return res.status(404).send();
+    }
+    Object.assign(team, req.body);
+    team.save();
+    res.send({ data: team });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+
+
