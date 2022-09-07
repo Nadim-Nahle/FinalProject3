@@ -42,6 +42,6 @@ router.patch("/auth/about/update/:id", auth, updateAbout);
 router.post("/auth/addroadmap", auth, addRoadmap);
 router.get("/auth/roadmap", auth, getRoadmap);
 router.delete("/auth/roadmap/delete/:id", auth, deleteRoadmap);
-
+router.patch("/auth/roadmap/update/:id", auth, updateRoadmap);
 
 module.exports = router;
