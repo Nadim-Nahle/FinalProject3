@@ -10,6 +10,12 @@ const {
   deleteHome,
   updateHome,
 } = require("../controllers/HomeController");
+const {
+  addAbout,
+  getAbout,
+  deleteAbout,
+  updateAbout,
+} = require("../controllers/AboutController");
 const auth = require("../middlewares/AuthMiddleware");
 
 const router = express.Router();
