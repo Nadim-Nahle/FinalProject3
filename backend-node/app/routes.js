@@ -40,6 +40,7 @@ router.patch("/auth/about/update/:id", auth, updateAbout);
 
 //ROADMAP ROUTES
 router.post("/auth/addroadmap", auth, addRoadmap);
+router.get("/auth/roadmap", auth, getRoadmap);
 
 
 module.exports = router;
