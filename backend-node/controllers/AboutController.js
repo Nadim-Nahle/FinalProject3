@@ -12,3 +12,18 @@ async function addAbout(req, res) {
     res.status(500).send(error.message);
   }
 }
+
+//GET ABOUT CONTROLLER
+async function getAbout(req, res) {
+  try {
+    const about = await About.find({ owner: req.user._id });
+    if (!about) {
+      return res.status(404).send();
+    }
+    res.status(200).send(about);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
