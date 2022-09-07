@@ -60,7 +60,7 @@ module.exports = {
   addFaq,
   getFaq,
   deleteFaq,
-
+  updateFaq,
 };
 
 
