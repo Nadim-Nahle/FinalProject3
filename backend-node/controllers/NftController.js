@@ -26,3 +26,20 @@ async function getNft(req, res) {
   }
 }
 
+//DELETE NFT CONTROLLER
+async function deleteNft(req, res) {
+  try {
+    const nft = await Nft.findById(req.params.id);
+    if (!nft) {
+      return res.status(404).send();
+    }
+    await nft.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+
+
