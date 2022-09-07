@@ -13,5 +13,15 @@ async function addRoadmap(req, res) {
   }
 }
 
-
-
+//GET ROADMAP CONTROLLER
+async function getRoadmap(req, res) {
+  try {
+    const roadmap = await Roadmap.find({ owner: req.user._id });
+    if (!roadmap) {
+      return res.status(404).send();
+    }
+    res.status(200).send(roadmap);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
