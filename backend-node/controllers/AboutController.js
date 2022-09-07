@@ -26,4 +26,34 @@ async function getAbout(req, res) {
   }
 }
 
+//DELETE ABOUT CONTROLLER
+async function deleteAbout(req, res) {
+  try {
+    const about = await About.findById(req.params.id);
+    if (!about) {
+      return res.status(404).send();
+    }
+    await about.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+//DELETE ABOUT CONTROLLER
+async function deleteAbout(req, res) {
+  try {
+    const movie = await About.findById(req.params.id);
+    if (!movie) {
+      return res.status(404).send();
+    }
+    await movie.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
+
 
