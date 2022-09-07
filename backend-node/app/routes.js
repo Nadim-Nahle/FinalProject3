@@ -34,6 +34,12 @@ const {
   deleteFaq,
   updateFaq,
 } = require("../controllers/FaqController");
+const {
+  addNft,
+  getNft,
+  deleteNft,
+  updateNft,
+} = require("../controllers/NftController");
 const auth = require("../middlewares/AuthMiddleware");
 
 const router = express.Router();
