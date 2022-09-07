@@ -61,7 +61,7 @@ module.exports = {
   addRoadmap,
   getRoadmap,
   deleteRoadmap,
-
+  updateRoadmap,
 };
 
 
