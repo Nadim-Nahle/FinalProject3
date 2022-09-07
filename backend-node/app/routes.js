@@ -20,10 +20,14 @@ const router = express.Router();
 router.post("/auth/register", registerErrors, register);
 router.post("/auth/login", login);
 
-//HOME ROutes
+//HOME ROUTES
 router.post("/auth/addhome", auth, addHome);
 router.get("/auth/home", auth, getHome);
 router.delete("/auth/delete/:id", auth, deleteHome);
 router.patch("/auth/movie/update/:id", auth, updateHome);
+
+//HOME ROUTES
+router.post("/auth/addabout", auth, addAbout);
+
 
 module.exports = router;
