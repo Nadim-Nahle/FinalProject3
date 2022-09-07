@@ -68,10 +68,14 @@ router.get("/auth/team", auth, getTeam);
 router.delete("/auth/team/delete/:id", auth, deleteTeam);
 router.patch("/auth/team/update/:id", auth, updateTeam);
 
-//FAQ ROUTES
+//NFT ROUTES
 router.post("/auth/addfaq", auth, addFaq);
 router.get("/auth/faq", auth, getFaq);
 router.delete("/auth/faq/delete/:id", auth, deleteFaq);
 router.patch("/auth/faq/update/:id", auth, updateFaq);
+
+//NFT ROUTES
+router.post("/auth/addnft", auth, addNft);
+
 
 module.exports = router;
