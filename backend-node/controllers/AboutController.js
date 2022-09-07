@@ -72,6 +72,7 @@ async function updateAbout(req, res) {
 
 module.exports = {
   addAbout,
+  getAbout,
 
 };
 
