@@ -57,5 +57,9 @@ async function updateTeam(req, res) {
 }
 
 
+module.exports = {
+  addTeam,
+
+};
 
 
