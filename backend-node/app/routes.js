@@ -16,6 +16,12 @@ const {
   deleteAbout,
   updateAbout,
 } = require("../controllers/AboutController");
+const {
+  addRoadmap,
+  getRoadmap,
+  deleteRoadmap,
+  updateRoadmap,
+} = require("../controllers/RoadmapController");
 const auth = require("../middlewares/AuthMiddleware");
 
 const router = express.Router();
