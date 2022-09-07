@@ -54,6 +54,22 @@ async function deleteAbout(req, res) {
   }
 }
 
+//UPDATE ABOUT CONTROLLER
+async function updateAbout(req, res) {
+  try {
+    const about = await About.findById(req.params.id);
+    if (!about) {
+      return res.status(404).send();
+    }
+    Object.assign(about, req.body);
+    about.save();
+    res.send({ data: about });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
 
 
 
