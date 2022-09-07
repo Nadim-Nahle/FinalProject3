@@ -41,6 +41,22 @@ async function deleteRoadmap(req, res) {
 }
 
 
+//UPDATE ROADMAP CONTROLLER
+async function updateRoadmap(req, res) {
+  try {
+    const roadmap = await roadmap.findById(req.params.id);
+    if (!roadmap) {
+      return res.status(404).send();
+    }
+    Object.assign(roadmap, req.body);
+    roadmap.save();
+    res.send({ data: roadmap });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
 
 
 
