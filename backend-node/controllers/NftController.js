@@ -58,6 +58,7 @@ async function updateNft(req, res) {
 
 module.exports = {
   addNft,
+  getNft,
 
 };
 
