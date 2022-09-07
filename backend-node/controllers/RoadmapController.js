@@ -57,6 +57,9 @@ async function updateRoadmap(req, res) {
 }
 
 
+module.exports = {
+  addRoadmap,
 
+};
 
 
