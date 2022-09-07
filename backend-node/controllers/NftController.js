@@ -13,6 +13,16 @@ async function addNft(req, res) {
   }
 }
 
-
-
+//GET NFT CONTROLLER
+async function getNft(req, res) {
+  try {
+    const nft = await Nft.find({ owner: req.user._id });
+    if (!nft) {
+      return res.status(404).send();
+    }
+    res.status(200).send(nft);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
 
