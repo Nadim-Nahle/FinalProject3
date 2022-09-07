@@ -30,6 +30,6 @@ router.patch("/auth/movie/update/:id", auth, updateHome);
 router.post("/auth/addabout", auth, addAbout);
 router.get("/auth/about", auth, getAbout);
 router.delete("/auth/about/delete/:id", auth, deleteAbout);
-
+router.patch("/auth/about/update/:id", auth, updateAbout);
 
 module.exports = router;
