@@ -26,7 +26,28 @@ async function getFaq(req, res) {
   }
 }
 
+//DELETE FAQ CONTROLLER
+async function deleteFaq(req, res) {
+  try {
+    const faq = await Faq.findById(req.params.id);
+    if (!faq) {
+      return res.status(404).send();
+    }
+    await faq.remove();
+    res.status(200).send({ data: true });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
 
+
+
+
+module.exports = {
+  addFaq,
+  getFaq,
+  deleteFaq,
+  updateFaq,
 };
 
 
