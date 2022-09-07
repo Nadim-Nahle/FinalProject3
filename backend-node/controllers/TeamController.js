@@ -61,7 +61,7 @@ module.exports = {
   addTeam,
   getTeam,
   deleteTeam,
-
+  updateTeam,
 };
 
 
