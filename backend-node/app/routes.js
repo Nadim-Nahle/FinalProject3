@@ -66,6 +66,6 @@ router.patch("/auth/team/update/:id", auth, updateTeam);
 router.post("/auth/addfaq", auth, addFaq);
 router.get("/auth/faq", auth, getFaq);
 router.delete("/auth/faq/delete/:id", auth, deleteFaq);
-
+router.patch("/auth/faq/update/:id", auth, updateFaq);
 
 module.exports = router;
