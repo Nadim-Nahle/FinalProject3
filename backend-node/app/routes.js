@@ -22,6 +22,12 @@ const {
   deleteRoadmap,
   updateRoadmap,
 } = require("../controllers/RoadmapController");
+const {
+  addTeam,
+  getTeam,
+  deleteTeam,
+  updateTeam,
+} = require("../controllers/TeamController");
 const auth = require("../middlewares/AuthMiddleware");
 
 const router = express.Router();
