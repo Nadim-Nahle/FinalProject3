@@ -74,7 +74,7 @@ module.exports = {
   addAbout,
   getAbout,
   deleteAbout,
-
+  updateAbout,
 };
 
 
