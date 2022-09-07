@@ -41,5 +41,21 @@ async function deleteNft(req, res) {
 }
 
 
+//UPDATE NFT CONTROLLER
+async function updateNft(req, res) {
+  try {
+    const nft = await Nft.findById(req.params.id);
+    if (!nft) {
+      return res.status(404).send();
+    }
+    Object.assign(nft, req.body);
+    nft.save();
+    res.send({ data: nft });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
+
+
 
 
