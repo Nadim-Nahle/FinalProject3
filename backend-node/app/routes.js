@@ -28,6 +28,12 @@ const {
   deleteTeam,
   updateTeam,
 } = require("../controllers/TeamController");
+const {
+  addFaq,
+  getFaq,
+  deleteFaq,
+  updateFaq,
+} = require("../controllers/FaqController");
 const auth = require("../middlewares/AuthMiddleware");
 
 const router = express.Router();
