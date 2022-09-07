@@ -41,13 +41,22 @@ async function deleteFaq(req, res) {
 }
 
 
+//UPDATE FAQ CONTROLLER
+async function updateFaq(req, res) {
+  try {
+    const faq = await Faq.findById(req.params.id);
+    if (!faq) {
+      return res.status(404).send();
+    }
+    Object.assign(faq, req.body);
+    faq.save();
+    res.send({ data: faq });
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
 
 
-module.exports = {
-  addFaq,
-  getFaq,
-  deleteFaq,
-  updateFaq,
-};
+
 
 
