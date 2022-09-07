@@ -58,6 +58,7 @@ async function updateFaq(req, res) {
 
 module.exports = {
   addFaq,
+  getFaq,
 
 };
 
