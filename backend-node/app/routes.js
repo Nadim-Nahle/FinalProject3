@@ -32,10 +32,14 @@ router.get("/auth/home", auth, getHome);
 router.delete("/auth/delete/:id", auth, deleteHome);
 router.patch("/auth/movie/update/:id", auth, updateHome);
 
-//HOME ROUTES
+//ABOUT ROUTES
 router.post("/auth/addabout", auth, addAbout);
 router.get("/auth/about", auth, getAbout);
 router.delete("/auth/about/delete/:id", auth, deleteAbout);
 router.patch("/auth/about/update/:id", auth, updateAbout);
+
+//ROADMAP ROUTES
+router.post("/auth/addroadmap", auth, addRoadmap);
+
 
 module.exports = router;
