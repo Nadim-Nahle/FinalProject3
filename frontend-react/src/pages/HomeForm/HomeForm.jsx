@@ -18,7 +18,7 @@ const HomeForm = () => {
             placeholder="Please Enter A Catchphrase!"
             className="field"
           ></textarea>
-          <button className="btn">Send</button>
+          <button className="btn">Next</button>
         </div>
       </div>
     </div>
