@@ -45,10 +45,22 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(LOGIN_URL, { email, password });
-      console.log(response);
+      const { data } = await axios.post(LOGIN_URL, { email, password });
+      console.log(data);
+      Swal.fire({
+        title: `Welcome ${data.user.name}! `,
+        text: `Login Successful`,
+        icon: "success",
+        confirmButtonText: "Cool",
+      });
     } catch (err) {
       setErrMsg(err?.response?.data);
+      Swal.fire({
+        title: `Error!<Br>${err?.response?.data}`,
+        text: "Do you want to continue",
+        icon: "error",
+        confirmButtonText: "Cool",
+      });
     }
   };
 
