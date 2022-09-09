@@ -34,7 +34,8 @@ function Copyright(props) {
 const theme = createTheme();
 
 const Register = () => {
-  
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
 
   return (
