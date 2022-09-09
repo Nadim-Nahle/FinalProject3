@@ -35,6 +35,7 @@ const theme = createTheme();
 
 const Register = () => {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
