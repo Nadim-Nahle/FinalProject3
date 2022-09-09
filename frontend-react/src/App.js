@@ -9,11 +9,19 @@ import Showcase from './components/sections/Showcase'
 import Team from './components/sections/Team'
 import Faq from './components/sections/Faq'
 import Footer from './components/Footer'
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <>
-      <GlobalStyles />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/*PUBLIC ROUTES*/}
+          <Route path="/" element={<Home />}></Route>
+        </Route>
+      </Routes>
+      {/* <GlobalStyles />
       <ThemeProvider theme={light}>
         <Navigation />
         <Home />
@@ -23,7 +31,7 @@ function App() {
         <Team />
         <Faq />
         <Footer />
-      </ThemeProvider>
+      </ThemeProvider> */}
     </>
   );
 }

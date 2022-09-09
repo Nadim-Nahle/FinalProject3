@@ -1,18 +1,11 @@
-import { Outlet, useLocation } from "react-router-dom";
-import FloatingBtn from "./floatingBtn/FloatingBtn";
-import Navbar from "./navbar/Navbar";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  const Location = useLocation();
   return (
     <>
-      <Navbar />
-
       <main className="App">
         <Outlet />
       </main>
-
-      {Location.pathname.includes("movies") ? null : <FloatingBtn />}
     </>
   );
 };
