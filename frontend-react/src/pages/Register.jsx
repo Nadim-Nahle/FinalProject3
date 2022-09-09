@@ -41,8 +41,18 @@ const Register = () => {
   const [errMsg, setErrMsg] = useState("");
   const [name, setName] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const response = await axios.post(REGISTER_URL, {
+        name,
+        email,
+        password,
+      });
+      console.log(response);
+    } catch (err) {
+      setErrMsg(err?.response?.data);
+    }
   };
 
   return (
