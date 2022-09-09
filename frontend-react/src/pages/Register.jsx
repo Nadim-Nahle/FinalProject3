@@ -41,6 +41,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -49,6 +50,7 @@ const Register = () => {
         name,
         email,
         password,
+        username,
       });
       console.log(response);
     } catch (err) {
@@ -93,6 +95,17 @@ const Register = () => {
               autoComplete="name"
               autoFocus
               onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Username"
+              name="username"
+              autoComplete="username"
+              autoFocus
+              onChange={(e) => setUsername(e.target.value)}
             />
             <TextField
               margin="normal"
