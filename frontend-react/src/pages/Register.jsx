@@ -37,6 +37,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
+  const [name, setName] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
