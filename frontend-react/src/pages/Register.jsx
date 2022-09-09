@@ -56,6 +56,12 @@ const Register = () => {
       console.log(response);
     } catch (err) {
       setErrMsg(err.response.data.errors[0].msg);
+      Swal.fire({
+        title: `Error!<Br>${err.response.data.errors[0].msg}`,
+        text: "Do you want to continue",
+        icon: "error",
+        confirmButtonText: "Cool",
+      });
     }
   };
 
