@@ -35,6 +35,9 @@ const theme = createTheme();
 
 const Login = () => {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  c;
+
   const handleSubmit = (event) => {
     event.preventDefault();
   };
