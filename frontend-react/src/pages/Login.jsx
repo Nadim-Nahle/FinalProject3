@@ -69,6 +69,9 @@ const Login = () => {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
+          <Typography variant="h5" color="red">
+            {errMsg}
+          </Typography>
           <Box
             component="form"
             onSubmit={handleSubmit}
