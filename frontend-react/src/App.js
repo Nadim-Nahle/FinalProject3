@@ -2,6 +2,7 @@ import NFTsWebsite from "./pages/NFTsWebsite";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           {/*PUBLIC ROUTES*/}
           <Route path="/" element={<NFTsWebsite />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
         </Route>
       </Routes>
 
