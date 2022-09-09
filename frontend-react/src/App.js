@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           {/*PUBLIC ROUTES*/}
           <Route path="/" element={<NFTsWebsite />}></Route>
-
+          <Route path="/login" element={<Login />}></Route>
         </Route>
       </Routes>
 
