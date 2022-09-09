@@ -74,6 +74,9 @@ const Register = () => {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
+          <Typography variant="h5" color="red">
+            {errMsg}
+          </Typography>
           <Box
             component="form"
             onSubmit={handleSubmit}
