@@ -100,6 +100,7 @@ const Register = () => {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
