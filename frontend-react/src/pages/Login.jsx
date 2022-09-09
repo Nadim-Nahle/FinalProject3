@@ -46,7 +46,9 @@ const Login = () => {
     try {
       const response = await axios.post(LOGIN_URL, { email, password });
       console.log(response);
-    } catch (err) {}
+    } catch (err) {
+      setErrMsg(err?.response?.data);
+    }
   };
 
   return (
