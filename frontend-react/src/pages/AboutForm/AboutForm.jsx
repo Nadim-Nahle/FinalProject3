@@ -18,7 +18,7 @@ const AboutForm = () => {
             placeholder="Please Enter Any Other Details!"
             className="field"
           ></textarea>
-          <button className="btn">Send</button>
+          <button className="btn">Next</button>
         </div>
       </div>
     </div>
