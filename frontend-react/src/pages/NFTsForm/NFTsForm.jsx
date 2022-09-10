@@ -39,8 +39,18 @@ const NFTsForm = () => {
             placeholder="Website Name"
             onChange={uploadImage}
           />
-          <input type="text" className="field" placeholder="NFT Number" />
-          <input type="text" className="field" placeholder="NFT Price" />
+          <input
+            type="text"
+            className="field"
+            placeholder="NFT Number"
+            onChange={(e) => setNumber(e.target.value)}
+          />
+          <input
+            type="text"
+            className="field"
+            placeholder="NFT Price"
+            onChange={(e) => setPrice(e.target.value)}
+          />
           <button className="btn">Finish</button>
         </div>
       </div>
