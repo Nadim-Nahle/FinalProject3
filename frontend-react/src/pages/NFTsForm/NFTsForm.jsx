@@ -37,12 +37,12 @@ const NFTsForm = () => {
     try {
       const response = await axios.post(
         ADDNFT_URL,
-        { image, number, price },
+        { picture: image, number, price },
         {
           headers: { Authorization: `Bearer ${JWT}` },
         }
       );
-      console.log(response);
+      console.log(response.data);
       navigate("/");
     } catch (err) {
       console.log(err.response.data);
@@ -54,12 +54,12 @@ const NFTsForm = () => {
     try {
       const response = await axios.post(
         ADDNFT_URL,
-        { image, number, price },
+        { picture: image, number, price },
         {
           headers: { Authorization: `Bearer ${JWT}` },
         }
       );
-      console.log(response);
+      console.log(response.data);
     } catch (err) {
       console.log(err.response.data);
     }
