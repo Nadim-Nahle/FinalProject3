@@ -7,6 +7,8 @@ const JWT = localStorage.getItem("JWT");
 const ADDFAQ_URL = "/addfaq";
 
 const FaqForm = () => {
+  const [question, setQuestion] = useState("");
+
   return (
     <div className="container">
       <div className="contact-box">
