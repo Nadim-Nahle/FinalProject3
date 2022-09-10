@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AboutForm.css";
 import axios from "../../api/axios";
+import { useNavigate } from "react-router-dom";
 
 const ADDABOUT_URL = "/addabout";
 
@@ -8,6 +9,8 @@ const AboutForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [details, setDetails] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
