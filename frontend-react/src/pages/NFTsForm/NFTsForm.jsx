@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./NFTsForm.css";
 
 const ADDNFT_URL = "/addnft";
+const JWT = localStorage.getItem("JWT");
 
 const NFTsForm = () => {
   const [image, setImage] = useState("");
