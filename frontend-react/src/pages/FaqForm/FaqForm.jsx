@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./FaqForm.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -24,6 +24,7 @@ const FaqForm = () => {
         }
       );
       console.log(response);
+      navigate("/roadmapform");
     } catch (err) {
       console.log(err.response.data);
     }
