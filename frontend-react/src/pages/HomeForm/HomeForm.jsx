@@ -19,7 +19,9 @@ const HomeForm = () => {
         catchphrase,
       });
       console.log(response);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -41,7 +43,7 @@ const HomeForm = () => {
             onChange={(e) => setLogo(e.target.value)}
           />
           <textarea
-            placeholder="Please Enter DADDHOME_URL Catchphrase!"
+            placeholder="Please Enter A Catchphrase!"
             className="field"
             onChange={(e) => setCatchphrase(e.target.value)}
           ></textarea>
