@@ -8,6 +8,7 @@ const ADDROADMAP_URL = "/addroadmap";
 
 const RoadmapForm = () => {
   const [grandopening, setGrandopening] = useState("");
+  const [greatbenefits, setGreatbenefits] = useState("");
 
   return (
     <div className="container">
