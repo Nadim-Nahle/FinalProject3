@@ -10,6 +10,26 @@ const FaqForm = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
+  const navigate = useNavigate();
+
+  const handleNext = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDFAQ_URL,
+        { question, answer },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
+      navigate("/roadmapform");
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
@@ -28,7 +48,9 @@ const FaqForm = () => {
             onChange={(e) => setAnswer(e.target.value)}
           ></textarea>
           <button className="btn-blue">Add Another Question</button>
-          <button className="btn">Next</button>
+          <button className="btn" onClick={handleNext}>
+            Next
+          </button>
         </div>
       </div>
     </div>
