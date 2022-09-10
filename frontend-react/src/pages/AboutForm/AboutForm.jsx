@@ -25,7 +25,7 @@ const AboutForm = () => {
         }
       );
       console.log(response);
-      navigate("/aboutform");
+      navigate("/faqform");
     } catch (err) {
       console.log(err.response.data);
     }
