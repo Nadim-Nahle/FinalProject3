@@ -68,7 +68,7 @@ router.get("/auth/roadmap", auth, getRoadmap);
 router.delete("/auth/roadmap/delete/:id", auth, deleteRoadmap);
 router.patch("/auth/roadmap/update/:id", auth, updateRoadmap);
 
-//ROADMAP ROUTES
+//TEAM ROUTES
 router.post("/auth/addteam", auth, addTeam);
 router.get("/auth/team", auth, getTeam);
 router.delete("/auth/team/delete/:id", auth, deleteTeam);
