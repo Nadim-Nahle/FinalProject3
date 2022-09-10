@@ -1,6 +1,7 @@
 import React from "react";
 import "./FaqForm.css";
 import axios from "../../api/axios";
+import { useNavigate } from "react-router-dom";
 
 const FaqForm = () => {
   return (
