@@ -4,6 +4,7 @@ import "./NFTsForm.css";
 const NFTsForm = () => {
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
+  const [number, setNumber] = useState("");
 
   const onLoad = (fileString) => {
     setImage(fileString);
