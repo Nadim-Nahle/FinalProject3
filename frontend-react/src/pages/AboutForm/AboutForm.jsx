@@ -23,6 +23,7 @@ const AboutForm = () => {
           <textarea
             placeholder="Please Enter A Description!"
             className="field"
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <textarea
             placeholder="Please Enter Any Other Details!"
