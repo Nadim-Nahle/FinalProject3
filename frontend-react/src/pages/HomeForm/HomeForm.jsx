@@ -12,6 +12,8 @@ const HomeForm = () => {
   const [logo, setLogo] = useState("");
   const [catchphrase, setCatchphrase] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(JWT);
@@ -24,6 +26,7 @@ const HomeForm = () => {
         }
       );
       console.log(response);
+      navigate("/aboutform");
     } catch (err) {
       console.log(err.response.data);
     }
