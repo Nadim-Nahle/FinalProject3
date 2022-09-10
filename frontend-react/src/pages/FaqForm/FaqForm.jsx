@@ -20,6 +20,7 @@ const FaqForm = () => {
           <textarea
             placeholder="Please Enter A Question!"
             className="field"
+            onChange={(e) => setQuestion(e.target.value)}
           ></textarea>
           <textarea
             placeholder="Please Enter The Answer"
