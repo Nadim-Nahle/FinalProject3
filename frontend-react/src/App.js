@@ -7,7 +7,7 @@ import HomeForm from "./pages/HomeForm/HomeForm";
 import AboutForm from "./pages/AboutForm/AboutForm";
 import FaqForm from "./pages/FaqForm/FaqForm";
 import RoadmapForm from "./pages/RoadmapForm/RoadmapForm";
-
+import NFTsForm from "./pages/NFTsForm/NFTsForm";
 
 function App() {
   return (
