@@ -8,6 +8,25 @@ const AboutForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [details, setDetails] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDABOUT_URL,
+        { title, description, details },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
+      navigate("/aboutform");
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
@@ -31,7 +50,9 @@ const AboutForm = () => {
             className="field"
             onChange={(e) => setDetails(e.target.value)}
           ></textarea>
-          <button className="btn">Next</button>
+          <button className="btn" onClick={handleSubmit}>
+            Next
+          </button>
         </div>
       </div>
     </div>
