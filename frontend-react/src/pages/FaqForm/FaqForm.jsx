@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./FaqForm.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
@@ -24,8 +24,6 @@ const FaqForm = () => {
         }
       );
       console.log(response);
-      setQuestion("");
-      setAnswer("");
     } catch (err) {
       console.log(err.response.data);
     }
@@ -41,8 +39,9 @@ const FaqForm = () => {
           headers: { Authorization: `Bearer ${JWT}` },
         }
       );
+      setQuestion("");
+      setAnswer("");
       console.log(response);
-      navigate("/roadmapform");
     } catch (err) {
       console.log(err.response.data);
     }
@@ -59,11 +58,13 @@ const FaqForm = () => {
             placeholder="Please Enter A Question!"
             className="field"
             onChange={(e) => setQuestion(e.target.value)}
+            value={question}
           ></textarea>
           <textarea
             placeholder="Please Enter The Answer"
             className="field"
             onChange={(e) => setAnswer(e.target.value)}
+            value={answer}
           ></textarea>
           <button className="btn-blue" onClick={handleNewQuestion}>
             Add Another Question
