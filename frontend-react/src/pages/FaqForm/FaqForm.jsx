@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FaqForm.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
