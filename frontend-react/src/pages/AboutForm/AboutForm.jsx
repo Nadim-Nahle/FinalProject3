@@ -1,6 +1,8 @@
 import React from "react";
 import "./AboutForm.css";
 
+const ADDABOUT_URL = "/addabout";
+
 const AboutForm = () => {
   return (
     <div className="container">
