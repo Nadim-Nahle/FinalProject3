@@ -20,10 +20,12 @@ const RoadmapForm = () => {
           <textarea
             placeholder="Please Enter Opening Details"
             className="field"
+            onChange={(e) => setGrandopening(e.target.value)}
           ></textarea>
           <textarea
             placeholder="Please Enter Benifit Details"
             className="field"
+            onChange={(e) => setGreatbenefits(e.target.value)}
           ></textarea>
           <textarea
             placeholder="Please Enter Early Access Details!"
