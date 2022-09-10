@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AboutForm.css";
 
 const ADDABOUT_URL = "/addabout";
 
 const AboutForm = () => {
+  const [title, setTitle] = useState("");
   return (
     <div className="container">
       <div className="contact-box">
