@@ -6,6 +6,7 @@ const ADDHOME_URL = "/addhome";
 
 const HomeForm = () => {
   const [name, setName] = useState("");
+  const [logo, setLogo] = useState("");
 
   return (
     <div className="container">
