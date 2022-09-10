@@ -6,6 +6,7 @@ const ADDABOUT_URL = "/addabout";
 const AboutForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [details, setDetails] = useState("");
   return (
     <div className="container">
       <div className="contact-box">
