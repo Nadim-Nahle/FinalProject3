@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./NFTsForm.css";
 
+const ADDNFT_URL = "/addnft";
+
 const NFTsForm = () => {
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
