@@ -24,7 +24,7 @@ const RoadmapForm = () => {
         }
       );
       console.log(response);
-      navigate("/roadmapform");
+      navigate("/nftsform");
     } catch (err) {
       console.log(err.response.data);
     }
