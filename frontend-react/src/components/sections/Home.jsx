@@ -112,7 +112,7 @@ const Home = () => {
           <img src={RoundTextBlack} alt="NFT" />
         </Round>
       </Container>
-      <FloatingBtn />
+      <FloatingBtn link="/homeform" />
     </Section>
   );
 };
