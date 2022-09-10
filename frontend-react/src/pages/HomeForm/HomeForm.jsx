@@ -4,6 +4,7 @@ import axios from "../../api/axios";
 import "./HomeForm.css";
 
 const ADDHOME_URL = "/addhome";
+const JWT = localStorage.getItem("JWT");
 
 const HomeForm = () => {
   const [name, setName] = useState("");
@@ -12,15 +13,18 @@ const HomeForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(JWT);
     try {
-      const response = await axios.post(ADDHOME_URL, {
-        name,
-        logo,
-        catchphrase,
-      });
+      const response = await axios.post(
+        ADDHOME_URL,
+        { name, logo, catchphrase },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
       console.log(response);
     } catch (err) {
-      console.log(err);
+      console.log(err.response.data);
     }
   };
 
