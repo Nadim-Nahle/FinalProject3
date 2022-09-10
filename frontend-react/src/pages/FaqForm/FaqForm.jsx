@@ -25,6 +25,7 @@ const FaqForm = () => {
           <textarea
             placeholder="Please Enter The Answer"
             className="field"
+            onChange={(e) => setAnswer(e.target.value)}
           ></textarea>
           <button className="btn-blue">Add Another Question</button>
           <button className="btn">Next</button>
