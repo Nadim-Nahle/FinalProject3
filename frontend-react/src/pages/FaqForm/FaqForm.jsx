@@ -17,7 +17,7 @@ const FaqForm = () => {
             placeholder="Please Enter The Answer"
             className="field"
           ></textarea>
-          <button className="btn">Add Another Question</button>
+          <button className="btn-blue">Add Another Question</button>
           <button className="btn">Next</button>
         </div>
       </div>
