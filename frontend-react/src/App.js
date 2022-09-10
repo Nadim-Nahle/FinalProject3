@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HomeForm from "./pages/HomeForm/HomeForm";
+import AboutForm from "./pages/AboutForm/AboutForm";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/homeform" element={<HomeForm />}></Route>
+          <Route path="/aboutform" element={<AboutForm />}></Route>
         </Route>
       </Routes>
 
