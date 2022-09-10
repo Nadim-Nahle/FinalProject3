@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import HomeForm from "./pages/HomeForm/HomeForm";
 import AboutForm from "./pages/AboutForm/AboutForm";
 import FaqForm from "./pages/FaqForm/FaqForm";
+import RoadmapForm from "./pages/RoadmapForm/RoadmapForm";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/homeform" element={<HomeForm />}></Route>
           <Route path="/aboutform" element={<AboutForm />}></Route>
           <Route path="/Faqform" element={<FaqForm />}></Route>
+          <Route path="/roadmapform" element={<RoadmapForm />}></Route>
         </Route>
       </Routes>
 
