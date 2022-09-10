@@ -46,7 +46,8 @@ const Login = () => {
     event.preventDefault();
     try {
       const { data } = await axios.post(LOGIN_URL, { email, password });
-      console.log(data);
+      console.log(data.secret_token);
+      localStorage.setItem("JWT", data.secret_token);
       Swal.fire({
         title: `Welcome ${data.user.name}! `,
         text: `Login Successful`,
