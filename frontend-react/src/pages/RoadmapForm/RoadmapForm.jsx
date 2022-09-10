@@ -7,6 +7,8 @@ const JWT = localStorage.getItem("JWT");
 const ADDROADMAP_URL = "/addroadmap";
 
 const RoadmapForm = () => {
+  const [grandopening, setGrandopening] = useState("");
+
   return (
     <div className="container">
       <div className="contact-box">
