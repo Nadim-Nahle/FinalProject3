@@ -13,7 +13,12 @@ const AboutForm = () => {
         <div className="left"></div>
         <div className="right">
           <h2>Let's Create the About Page!</h2>
-          <input type="text" className="field" placeholder="Title" />
+          <input
+            type="text"
+            className="field"
+            placeholder="Title"
+            onChange={(e) => setTitle(e.target.value)}
+          />
 
           <textarea
             placeholder="Please Enter A Description!"
