@@ -8,6 +8,7 @@ const ADDFAQ_URL = "/addfaq";
 
 const FaqForm = () => {
   const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
   return (
     <div className="container">
