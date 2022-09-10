@@ -16,6 +16,12 @@ const NFTsForm = () => {
     };
   };
 
+  const uploadImage = (e) => {
+    const files = e.target.files;
+    const file = files[0];
+    getBased64(file);
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
