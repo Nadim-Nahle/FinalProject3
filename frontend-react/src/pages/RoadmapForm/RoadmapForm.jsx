@@ -10,6 +10,24 @@ const RoadmapForm = () => {
   const [grandopening, setGrandopening] = useState("");
   const [greatbenefits, setGreatbenefits] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDROADMAP_URL,
+        { grandopening, greatbenefits },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
+      navigate("/roadmapform");
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
@@ -39,7 +57,9 @@ const RoadmapForm = () => {
             placeholder="Please Enter Holder Rankings Details!"
             className="field"
           ></textarea>
-          <button className="btn">Next</button>
+          <button className="btn" onClick={handleSubmit}>
+            Next
+          </button>
         </div>
       </div>
     </div>
