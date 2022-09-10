@@ -1,5 +1,6 @@
 import React from "react";
 import "./FaqForm.css";
+import axios from "../../api/axios";
 
 const FaqForm = () => {
   return (
