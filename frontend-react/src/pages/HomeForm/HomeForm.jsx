@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import "./HomeForm.css";
 
 const ADDHOME_URL = "/addhome";
 
 const HomeForm = () => {
+  const [name, setName] = useState("");
+
   return (
     <div className="container">
       <div className="contact-box">
