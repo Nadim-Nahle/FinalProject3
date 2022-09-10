@@ -8,6 +8,14 @@ const NFTsForm = () => {
     setImage(fileString);
   };
 
+  const getBased64 = (file) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      onLoad(reader.result);
+    };
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
