@@ -3,6 +3,7 @@ import "./NFTsForm.css";
 
 const NFTsForm = () => {
   const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
 
   const onLoad = (fileString) => {
     setImage(fileString);
@@ -28,7 +29,12 @@ const NFTsForm = () => {
         <div className="left"></div>
         <div className="right">
           <h2>Let's Upload the NFTs!</h2>
-          <input type="file" className="field" placeholder="Website Name" />
+          <input
+            type="file"
+            className="field"
+            placeholder="Website Name"
+            onChange={uploadImage}
+          />
           <input type="text" className="field" placeholder="NFT Number" />
           <input type="text" className="field" placeholder="NFT Price" />
           <button className="btn">Finish</button>
