@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "../../api/axios";
 import "./NFTsForm.css";
 
 const ADDNFT_URL = "/addnft";
@@ -27,6 +29,25 @@ const NFTsForm = () => {
     getBased64(file);
   };
 
+  const navigate = useNavigate();
+
+  const handleNewNFT = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDNFT_URL,
+        { image, number, price },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
@@ -51,6 +72,9 @@ const NFTsForm = () => {
             placeholder="NFT Price"
             onChange={(e) => setPrice(e.target.value)}
           />
+          <button className="btn-blue" onClick={handleNewNFT}>
+            Add Another NFT
+          </button>
           <button className="btn">Finish</button>
         </div>
       </div>
