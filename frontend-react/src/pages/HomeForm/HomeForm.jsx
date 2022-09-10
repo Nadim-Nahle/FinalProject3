@@ -1,6 +1,8 @@
 import React from "react";
 import "./HomeForm.css";
 
+const ADDHOME_URL = "/addhome";
+
 const HomeForm = () => {
   return (
     <div className="container">

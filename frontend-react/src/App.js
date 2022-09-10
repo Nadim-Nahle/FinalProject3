@@ -22,6 +22,7 @@ function App() {
           <Route path="/aboutform" element={<AboutForm />}></Route>
           <Route path="/Faqform" element={<FaqForm />}></Route>
           <Route path="/roadmapform" element={<RoadmapForm />}></Route>
+          <Route path="/Nftsform" element={<NFTsForm />}></Route>
         </Route>
       </Routes>
 
