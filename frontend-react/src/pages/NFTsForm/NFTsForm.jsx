@@ -31,6 +31,23 @@ const NFTsForm = () => {
 
   const navigate = useNavigate();
 
+  const handleFinish = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDNFT_URL,
+        { image, number, price },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
+      navigate("/");
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
   const handleNewNFT = async (event) => {
     event.preventDefault();
     console.log(JWT);
@@ -75,7 +92,9 @@ const NFTsForm = () => {
           <button className="btn-blue" onClick={handleNewNFT}>
             Add Another NFT
           </button>
-          <button className="btn">Finish</button>
+          <button className="btn" onClick={handleFinish}>
+            Finish
+          </button>
         </div>
       </div>
     </div>
