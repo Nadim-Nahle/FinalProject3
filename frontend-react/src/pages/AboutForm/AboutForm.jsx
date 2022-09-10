@@ -28,6 +28,7 @@ const AboutForm = () => {
           <textarea
             placeholder="Please Enter Any Other Details!"
             className="field"
+            onChange={(e) => setDetails(e.target.value)}
           ></textarea>
           <button className="btn">Next</button>
         </div>
