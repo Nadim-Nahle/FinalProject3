@@ -4,6 +4,7 @@ import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
 const ADDABOUT_URL = "/addabout";
+const JWT = localStorage.getItem("JWT");
 
 const AboutForm = () => {
   const [title, setTitle] = useState("");
