@@ -3,6 +3,8 @@ import "./FaqForm.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
+const JWT = localStorage.getItem("JWT");
+
 const FaqForm = () => {
   return (
     <div className="container">
