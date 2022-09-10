@@ -4,6 +4,7 @@ import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
 const JWT = localStorage.getItem("JWT");
+const ADDFAQ_URL = "/addfaq";
 
 const FaqForm = () => {
   return (
