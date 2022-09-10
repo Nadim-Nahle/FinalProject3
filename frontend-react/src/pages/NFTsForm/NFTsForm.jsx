@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NFTsForm.css";
 
 const NFTsForm = () => {
+  const [image, setImage] = useState("");
+
+  const onLoad = (fileString) => {
+    setImage(fileString);
+  };
+
   return (
     <div className="container">
       <div className="contact-box">
