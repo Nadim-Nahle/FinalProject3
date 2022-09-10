@@ -24,6 +24,24 @@ const FaqForm = () => {
         }
       );
       console.log(response);
+      setQuestion("");
+      setAnswer("");
+    } catch (err) {
+      console.log(err.response.data);
+    }
+  };
+  const handleNewQuestion = async (event) => {
+    event.preventDefault();
+    console.log(JWT);
+    try {
+      const response = await axios.post(
+        ADDFAQ_URL,
+        { question, answer },
+        {
+          headers: { Authorization: `Bearer ${JWT}` },
+        }
+      );
+      console.log(response);
       navigate("/roadmapform");
     } catch (err) {
       console.log(err.response.data);
@@ -47,7 +65,9 @@ const FaqForm = () => {
             className="field"
             onChange={(e) => setAnswer(e.target.value)}
           ></textarea>
-          <button className="btn-blue">Add Another Question</button>
+          <button className="btn-blue" onClick={handleNewQuestion}>
+            Add Another Question
+          </button>
           <button className="btn" onClick={handleNext}>
             Next
           </button>
