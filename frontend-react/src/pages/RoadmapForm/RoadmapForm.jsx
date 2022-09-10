@@ -3,6 +3,8 @@ import "./RoadmapForm.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
+const JWT = localStorage.getItem("JWT");
+
 const RoadmapForm = () => {
   return (
     <div className="container">
