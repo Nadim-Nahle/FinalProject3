@@ -131,7 +131,7 @@ const HamburgerMenu = styled.span`
   }
 `;
 
-const Navigation = () => {
+const Navigation = (props) => {
   const detectProvider = () => {
     let provider;
     if (window.ethereum) {
@@ -155,6 +155,22 @@ const Navigation = () => {
     });
     setClick(!click);
   };
+
+  const onClickHandler = async () => {
+    console.log("hello");
+    const provider = detectProvider();
+    if (provider) {
+      if (provider !== window.ethereum) {
+        console.error(
+          "Not window.ethereum provider. Do you have multiple wallet installed ?"
+        );
+      }
+      await provider.request({
+        method: "eth_requestAccounts",
+      });
+    }
+    props.onLogin(provider);
+  };
   return (
     <Section>
       <NavBar>
@@ -170,12 +186,12 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
           <MenuItem>
-            <div className="mobile">
+            <div onClick={onClickHandler} className="mobile">
               <Button text="Connect Wallet" link="/" />
             </div>
           </MenuItem>
         </Menu>
-        <div className="desktop">
+        <div onClick={onClickHandler} className="desktop">
           <Button text="Connect Wallet" link="/" />
         </div>
       </NavBar>
