@@ -27,7 +27,6 @@
 <br><br>
 
 
-<br><br>
 
 <img id='tech-stack' src="./readme/title4.svg"/>
 
