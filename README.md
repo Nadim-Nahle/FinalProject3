@@ -64,7 +64,7 @@ Using the above mentioned tech stacks and the wireframes build with figma from t
 
 | Home  | About  |
 | -----------------| -----|
-| ![Home](https://media.giphy.com/media/Pk4GtmzYC8gz0pxTXl/giphy.gif) | ![About]https://media.giphy.com/media/enzflLHPVyr67s7Yky/giphy.gif)
+| ![Home](https://media.giphy.com/media/Pk4GtmzYC8gz0pxTXl/giphy.gif) | ![About](https://media.giphy.com/media/enzflLHPVyr67s7Yky/giphy.gif)
 
 | Showcase | Team  |
 | -----------------| -----|
@@ -76,7 +76,7 @@ Using the above mentioned tech stacks and the wireframes build with figma from t
 
 | footer | login  |
 | -----------------| -----|
-| ![footer]https://media.giphy.com/media/1qNxKQE9jBbaV80e9c/giphy.gif) | ![login](https://media.giphy.com/media/u6h0p2YKFas5q29IJj/giphy.gif)
+| ![footer](https://media.giphy.com/media/1qNxKQE9jBbaV80e9c/giphy.gif) | ![login](https://media.giphy.com/media/u6h0p2YKFas5q29IJj/giphy.gif)
 
 | Connect Metamask | Home Builder |
 | -----------------| -----|
