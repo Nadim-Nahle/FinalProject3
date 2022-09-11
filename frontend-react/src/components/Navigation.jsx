@@ -132,6 +132,8 @@ const HamburgerMenu = styled.span`
 `;
 
 const Navigation = (props) => {
+  const [isConnecting, setIsConnecting] = useState(false);
+
   const detectProvider = () => {
     let provider;
     if (window.ethereum) {
@@ -145,7 +147,6 @@ const Navigation = (props) => {
   };
 
   const [click, setClick] = useState(false);
-  const [isConnecting, setIsConnecting] = useState(false);
 
   const scrollTo = (id) => {
     let element = document.getElementById(id);
@@ -157,7 +158,7 @@ const Navigation = (props) => {
     setClick(!click);
   };
 
-  const onClickHandler = async () => {
+  const onLoginHandler = async () => {
     console.log("hello");
     const provider = detectProvider();
     if (provider) {
@@ -166,9 +167,11 @@ const Navigation = (props) => {
           "Not window.ethereum provider. Do you have multiple wallet installed ?"
         );
       }
+      setIsConnecting(true);
       await provider.request({
         method: "eth_requestAccounts",
       });
+      setIsConnecting(false);
     }
     props.onLogin(provider);
   };
@@ -187,12 +190,12 @@ const Navigation = (props) => {
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
           <MenuItem>
-            <div onClick={onClickHandler} className="mobile">
+            <div className="mobile">
               <Button text="Connect Wallet" link="/" />
             </div>
           </MenuItem>
         </Menu>
-        <div onClick={onClickHandler} className="desktop">
+        <div onClick={onLoginHandler} className="desktop">
           <Button text="Connect Wallet" link="/" />
         </div>
       </NavBar>
