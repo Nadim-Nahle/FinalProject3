@@ -195,9 +195,11 @@ const Navigation = (props) => {
             </div>
           </MenuItem>
         </Menu>
-        <div onClick={onLoginHandler} className="desktop">
-          <Button text="Connect Wallet" link="/" />
-        </div>
+        {isConnecting ? null : (
+          <div onClick={onLoginHandler} className="desktop">
+            <Button text="Wallet Connected" link="/" />
+          </div>
+        )}
       </NavBar>
     </Section>
   );
