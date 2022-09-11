@@ -145,6 +145,7 @@ const Navigation = (props) => {
   };
 
   const [click, setClick] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false);
 
   const scrollTo = (id) => {
     let element = document.getElementById(id);
